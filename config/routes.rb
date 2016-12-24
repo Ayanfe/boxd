@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'static_pages#index'
+  
   get 'user/new'
 
   get 'user/login'
