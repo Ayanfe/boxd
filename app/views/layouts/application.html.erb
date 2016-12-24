@@ -10,17 +10,19 @@
 
   <body>
     <header>
-      <%= link_to 'index', '#' , id:boxd_logo%>
+      <%= link_to 'BOXD', '#' , id:'boxd_logo'%>
       <nav>
         <ul>
           <li><%=link_to 'OUR MEALS', '#'%></li>
           <li><%=link_to 'ABOUT BOXD', '#'%></li>
-          <li><%link_to 'HOW IT WORKS' '#'%></li>
-
+          <li><%link_to 'HOW IT WORKS', '#'%></li>
+          <li id="login_button"><%link_to 'LOG in', '#'%></li>
         </ul>
       </nav>
-
     </header>
+    <div class="home_banner">
+      <img src="" alt="">
+    </div>
     <%= yield %>
   </body>
 </html>
