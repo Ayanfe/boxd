@@ -1,13 +1,82 @@
 *{
   border:0;
   margin: 0;
+  font-family:sans-serif;
 }
+
+$button-red:rgba(255,40,40,.7);
 
 /*header*/
+header{
+  width: 100%;
+  height:100px;
+  nav{
+    ul{
+      height: 100px;
+        li{
+          margin: 40px 60px 40px 0px;
+          float: right;
+          list-style-type: none;
+          a{
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+          }
+        }
+        .links_header{
+          margin-right: 150px;
+        }
+        #login_button{
+          border: 1px solid black;
+          padding: 10px 50px;
+          background-color: $button-red;
+          color: white;
+        }
+      }
 
-header nav ul{
-  float:right;
+    }
 }
-header nav ul li{
-  float:left;
+
+/*index page*/
+
+#home_banner{
+  width: 100%;
+}
+
+#our_meals_banner{
+  color: white;
+  padding:20px 50px;
+  background-color:$button-red;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#our_meals_button{
+  text-align: center;
+  margin: -7% 0 100px 0;
+}
+
+#how_heading{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.9em;
+  font-family: sans-serif;
+}
+#how_descriptions{
+  margin-top: 50px;
+  width: 100%;
+  background-color: grey;
+  padding: 30px 50px;
+  height: 300px;
+  background-color: $button-red;
+  .how_descriptions{
+    text-transform: uppercase;
+    float: right;
+    text-align: center;
+    margin: 30px 280px 0 50px;
+
+    h3{
+      margin-top: 50px;
+    }
+  }
 }
