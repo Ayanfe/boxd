@@ -3,8 +3,7 @@ class CreateCustomers < ActiveRecord::Migration[5.0]
     create_table :customers do |t|
       t.string :name
       t.string :email
-      t.integer :customer_id
-
+      
       t.timestamps
     end
   end
