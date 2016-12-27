@@ -2,10 +2,10 @@
   <nav>
     <ul>
       <li ><%=link_to 'log in', '#',id:"login_button"%></li>
-      <li class="links_header header_links"><%=link_to 'how it works', '#'%></li>
-      <li class="links_header header_links"><%=link_to 'about boxd', '#'%></li>
-      <li class="links_header header_links"><%=link_to 'our meals', '#'%></li>
-      <li class="links_header"><%=link_to image_tag('#', alt:'BOXD')%></li>
+      <li class="links_header header_links"><%=link_to 'how it works', how_it_works_path%></li>
+      <li class="links_header header_links"><%=link_to 'about boxd', about_path%></li>
+      <li class="links_header header_links"><%=link_to 'our meals', our_meals_path%></li>
+      <li class="links_header"><%=link_to image_tag( '#', alt:'BOXD'), index_path%></li>
     </ul>
   </nav>
 </header>
