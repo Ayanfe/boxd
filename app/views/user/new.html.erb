@@ -1,2 +1,13 @@
-<h1>User#new</h1>
-<p>Find me in app/views/user/new.html.erb</p>
+<% provide(:title, "Sign up")%>
+
+<div id="new_user_form">
+  <form action="#">
+    <input type="text" class="new_user_form" id="first_name" placeholder="First Name">
+    <input type="text" class="new_user_form" id="last_name" placeholder="Last Name">
+    <input type="text" class="new_user_form" placeholder="Email Address">
+    <input type="text" class="new_user_form" placeholder="Your Address">
+    <input type="password" class="new_user_form" placeholder="password" id="signup_password">
+    <input type="password" class="new_user_form" placeholder="password confirmation" id="signup_password_confirmation">
+    <input type="submit" name="" value="sign up" class="new_user_form">
+  </form>
+</div>

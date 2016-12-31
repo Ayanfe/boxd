@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/index', to: 'static_pages#index'
 
-  get '/new', to: 'user#new', as:'sign_up'
+  get '/sign_up', to: 'user#new'
 
   get '/login', to: 'user#login'
 

@@ -4,13 +4,24 @@
   font-family:sans-serif;
 }
 
-$button-red:rgba(255,40,40,.7);
+/*variables*/
+$light-red:rgba(255,40,40,.8);
+$lighter-red:rgba(255,40,40,.6);
+$button-font-size:1.3em;
+
+/*mixins*/
+@mixin box-sizing{
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+         box-sizing: border-box;
+}
 
 /*header*/
 header{
   width: 100%;
   height:100px;
   nav{
+
     ul{
       height: 100px;
         li{
@@ -27,9 +38,9 @@ header{
           margin-right: 150px;
         }
         #login_button{
-          border: 1px solid black;
+          border: 1px solid $light-red;
           padding: 10px 50px;
-          background-color: $button-red;
+          background-color: $light-red;
           color: white;
         }
       }
@@ -46,7 +57,7 @@ header{
 #our_meals_banner{
   color: white;
   padding:20px 50px;
-  background-color:$button-red;
+  background-color:$light-red;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -62,21 +73,112 @@ header{
   font-size: 1.9em;
   font-family: sans-serif;
 }
-#how_descriptions{
-  margin-top: 50px;
-  width: 100%;
-  background-color: grey;
-  padding: 30px 50px;
-  height: 300px;
-  background-color: $button-red;
-  .how_descriptions{
-    text-transform: uppercase;
-    float: right;
-    text-align: center;
-    margin: 30px 280px 0 50px;
 
-    h3{
-      margin-top: 50px;
+#login_form_holder{
+  width: 100%;
+  height:50%;
+  padding: 180px 0 200px 0;
+
+   a#sign_up_button{
+    text-decoration: none;
+    padding: 20px 230px;
+    background-color: $light-red;
+    color: white;
+    font-size: $button-font-size;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin:0 25px;
+    &:hover{
+      cursor: pointer;
     }
+
+  }
+
+  a#password_reset{
+    color: $light-red;
+    float:right;
+    text-transform: capitalize;
+  }
+
+  #user_form form{
+    width:600px;
+    margin: auto;
+
+
+    input{
+      width: 100%;
+      border: 1px solid $light-red;
+      height: 60px;
+      margin:10px 0;
+      font-size: 1.1em;
+    }
+    input[type=text],input[type=password]{
+      border-radius: 4px;
+      padding: 5px 0 5px 10px;
+    }
+    input[type=submit]{
+      height: 70px;
+      margin-top: 20px;
+      background-color: $light-red;
+      color: white;
+      font-size: 1.3em;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      border-radius: 3px;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    p{
+      text-transform: uppercase;
+      text-align: center;
+      margin: 20px 0 40px 0;
+
+    }
+    .user_form{
+      @include box-sizing;
+    }
+
+  }
+}
+
+div#new_user_form{
+  width:800px;
+  margin: 50px auto;
+
+  #first_name{
+    width:48%;
+  }
+  #last_name{
+    float: right;
+    width: 48%;
+  }
+
+  #signup_password{
+    width: 48%;
+  }
+  #signup_password_confirmation{
+    width: 48%;
+    float:right;
+  }
+  .new_user_form{
+    width: 100%;
+    border: 1px solid $light-red;
+    @include box-sizing;
+    height: 50px;
+    margin: 30px 0;
+    border-radius: 4px;
+    text-transform: capitalize;
+    padding: 20px 0 20px 20px;
+    font-size: 1.1em;
+  }
+  input[type=submit]{
+    background-color: $light-red;
+    color: white;
+    text-transform: uppercase;
+    font-size: $button-font-size;
+    padding: 30px  0 50px 0px;
   }
 }
