@@ -1,12 +1,18 @@
 <div id='banner_home'>
-  <%= image_tag("food-park-banner0.jpg", alt:"Home Banner", id:'home_banner')%>
+  <%= image_tag("food-park-banner0", alt:"Home Banner", id:'home_banner')%>
   <div id="our_meals_button">
     <%= link_to 'our meals', our_meals_path, id:'our_meals_banner'%>
   </div>
+  <div id="text_banner1">
+    <h2>Too busy for market runs or kitchen duty?</h2>
+    <h3>we'd be happy to shop and cook for you.</h3>
+  </div>
 </div>
 
+<div>
+    <h1 id="how_heading">how it works</h1>
+</div>
 
-  <h1 id="how_heading">how it works</h1>
 <div id="how_descriptions">
   <div class="how_descriptions">
     <%= image_tag('#', alt:'We deliver')%>
@@ -24,4 +30,16 @@
   </div>
 
 
+</div>
+<div id="button_more">
+  <%= link_to "more", how_it_works_path, id:"more_button"%>
+</div>
+
+<div id='banner_home2'>
+  <%= image_tag("MORE", alt:"Home Banner", id:'home_banner2')%>
+
+  <div id="our_meals_button2">
+    <%= link_to 'our meals', our_meals_path, id:'our_meals_banner2'%>
+  </div>
+  <h2>delicious meals you'll definitely love to try</h2>
 </div>

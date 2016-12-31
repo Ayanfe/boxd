@@ -28,8 +28,26 @@ header {
       color: white; }
 
 /*index page*/
-#home_banner {
+#home_banner, #home_banner2 {
   width: 100%; }
+
+#banner_home #text_banner1 {
+  text-align: center;
+  position: absolute;
+  top: 260px;
+  left: 420px;
+  color: white;
+  text-transform: uppercase; }
+
+#banner_home2 h2 {
+  text-transform: uppercase;
+  color: white;
+  margin-left: 100px;
+  margin-top: -40%;
+  font-size: 4.0em;
+  height: 30px;
+  width: 100px;
+  display: block; }
 
 #our_meals_banner {
   color: white;
@@ -38,7 +56,14 @@ header {
   text-transform: uppercase;
   text-decoration: none; }
 
-#our_meals_button {
+#our_meals_banner2 {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 20px 100px;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+#our_meals_button, #our_meals_button2 {
   text-align: center;
   margin: -7% 0 100px 0; }
 
@@ -51,15 +76,32 @@ header {
 #how_descriptions {
   margin-top: 50px;
   width: 100%;
-  padding: 30px 50px;
   height: 300px; }
   #how_descriptions .how_descriptions {
     text-transform: uppercase;
     float: right;
-    text-align: center; }
+    text-align: center;
+    margin: 100px 250px 60px 0;
+    color: rgba(20, 20, 20, 0.9);
+    font-stretch: extra-expanded;
+    font-size: 1.4em; }
     #how_descriptions .how_descriptions h3 {
       margin-top: 50px; }
 
+#button_more {
+  text-align: center;
+  margin: 80px 0; }
+  #button_more #more_button {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid rgba(0, 153, 0, 0.7);
+    background-color: rgba(0, 153, 0, 0.7);
+    padding: 20px 70px;
+    font-size: 1.3em;
+    clear: both; }
+
+/*Login*/
 #login_form_holder {
   width: 100%;
   height: 50%;
