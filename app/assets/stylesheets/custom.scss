@@ -217,41 +217,11 @@ header{
   }
 }
 
-div#new_user_form{
-  width:800px;
-  margin: 50px auto;
-
-  #first_name{
-    width:48%;
+#new_user_form{
+  li{
+    list-style-type: none;
   }
-  #last_name{
-    float: right;
-    width: 48%;
-  }
-
-  #signup_password{
-    width: 48%;
-  }
-  #signup_password_confirmation{
-    width: 48%;
-    float:right;
-  }
-  .new_user_form{
-    width: 100%;
-    border: 1px solid $light-red;
-    @include box-sizing;
-    height: 50px;
-    margin: 30px 0;
-    border-radius: 4px;
-    text-transform: capitalize;
-    padding: 20px 0 20px 20px;
-    font-size: 1.1em;
-  }
-  input[type=submit]{
-    background-color: $light-red;
-    color: white;
-    text-transform: uppercase;
-    font-size: $button-font-size;
-    padding: 30px  0 50px 0px;
+  input{
+    border: 1px solid black;
   }
 }

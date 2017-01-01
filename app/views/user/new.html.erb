@@ -1,13 +1,17 @@
 <% provide(:title, "Sign up")%>
 
 <div id="new_user_form">
-  <form action="#">
-    <input type="text" class="new_user_form" id="first_name" placeholder="First Name">
-    <input type="text" class="new_user_form" id="last_name" placeholder="Last Name">
-    <input type="text" class="new_user_form" placeholder="Email Address">
-    <input type="text" class="new_user_form" placeholder="delivery Address">
-    <input type="password" class="new_user_form" placeholder="password" id="signup_password">
-    <input type="password" class="new_user_form" placeholder="password confirmation" id="signup_password_confirmation">
-    <input type="submit" name="" value="sign up" class="new_user_form">
-  </form>
+  <%= form_for(@user) do |f| %>
+  <ul>
+    <li><%= f.text_field :first_name, class:"new_user_form",placeholder:"first name"%></li>
+    <li><%= f.text_field :last_name, class:"new_user_form",placeholder:"last name"%></li>
+    <li><%= f.email_field :email, class:"new_user_form", placeholder:"email address"%></li>
+    <li><%= f.text_field :delivery_address, class:"new_user_form", placeholder:"delivery address"%></li>
+    <li><%= f.password_field :password, class:"new_user_form", placeholder:"password"%></li>
+    <li><%= f.password_field :password_confirmation, class:"new_user_form", placeholder:"password confirmation"%></li>
+    <li><%= f.submit "sign up",class:"new_user_form"%></li>
+  </ul>
+
+  <%end%>
+
 </div>

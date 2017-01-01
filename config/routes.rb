@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   get '/how', to: 'static_pages#how', as: 'how_it_works'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :customers
+  resources :users
 end
