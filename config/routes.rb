@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   root 'static_pages#index'
 
   get '/index', to: 'static_pages#index'
@@ -16,5 +18,5 @@ Rails.application.routes.draw do
   get '/how', to: 'static_pages#how', as: 'how_it_works'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users
+resource :users
 end
