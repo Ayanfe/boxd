@@ -168,6 +168,8 @@ header {
     color: rgba(20, 20, 20, 0.6); }
   .how_sections .open_box, .how_sections .closed_box {
     width: 200px; }
+  .how_sections .closed_box {
+    margin: 50px 0 0 100px; }
   .how_sections p {
     display: inline-block;
     width: 80%;

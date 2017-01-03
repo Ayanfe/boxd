@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
 
 
-  devise_for :users
+  devise_for :users, :controller => {registrations: 'registrations'}
+
   root 'static_pages#index'
-
-  get '/index', to: 'static_pages#index'
-
-  get '/sign_up', to: 'user#new'
-
-  get '/login', to: 'user#login'
 
   get '/index', to: 'static_pages#index'
 
