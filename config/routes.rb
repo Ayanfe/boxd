@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+  devise_for :users, :controller => {registrations: 'registrations'}
+
   root 'static_pages#index'
 
   get '/index', to: 'static_pages#index'
