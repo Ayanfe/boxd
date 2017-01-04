@@ -439,7 +439,9 @@ footer{
   #links_footer{
     color: white;
     text-transform: uppercase;
-
+    margin-top: 20px;
+    display: inline-block;
+    float: left;
     a{
       text-decoration: none;
       color: white;
@@ -457,10 +459,12 @@ footer{
   }
   #social_media{
     display: inline-block;
-    margin-left: 8%;
+    margin:30px 50px 0 8%;
+    float: right;
     img{
       margin-right: 30px;
       float: right;
+      width: 60px;
     }
   }
 

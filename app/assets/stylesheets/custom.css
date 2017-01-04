@@ -337,6 +337,9 @@ footer {
   footer #links_footer {
     color: white;
     text-transform: uppercase;
+    margin-top: 20px;
+    display: inline-block;
+    float: left;
     display: inline-block;
     height: 100px;
     margin-left: 30px; }
@@ -350,9 +353,11 @@ footer {
       margin-bottom: 30px; }
   footer #social_media {
     display: inline-block;
-    margin-left: 8%; }
+    margin: 30px 50px 0 8%;
+    float: right; }
     footer #social_media img {
       margin-right: 30px;
-      float: right; }
+      float: right;
+      width: 60px; }
 
 /*# sourceMappingURL=custom.css.map */
