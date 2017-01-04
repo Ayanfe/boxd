@@ -25,29 +25,71 @@
     /*header*/
     header{
       width: 100%;
+
+      #user_header{
+        margin-left: 80px;
+        ul{
+          li{
+            list-style-type: none;
+          }
+        }
+      }
+      .clearfix:after {
+        content: "";
+        display: table;
+      }
+      .sub-menu{
+        display: none;
+        position: absolute;
+        background-color: $light-red;
+        z-index: 1;
+        text-align: center;
+        padding: 20px 20px;
+        border: 1px solid $light-red;
+        border-radius: 4px;
+
+        ul{
+          li{
+            a{
+              color: white;
+
+            }
+          }
+        }
+
+      }
       img{
         width: 80px;
       }
       nav{
+        position: relative;
+        display: inline-block;
         ul{
-            li{
-              margin: 40px 60px 0 0px;
+          .drop_down:after{
+            content: "\25BC"; /*escaped unicode for the down arrow*/
+                font-size: .5em;
+                display: inline;
+                position: relative;
+                bottom:1px;
+          }
+            li.links_header{
+              margin: 40px 70px 0 80px;
               float: right;
               list-style-type: none;
               line-height: 80px;
+              display: inline;
 
+              &:hover>ul{
+                display: block;
+              }
               a{
                 text-transform: uppercase;
                 text-decoration: none;
                 color: black;
               }
             }
-            .links_header{
-              margin-right: 170px;
-
-            }
             #login_button{
-              border: 1px solid $light-red;
+              border: 1px solid $dark-grey;
               padding: 10px 50px;
               background-color: $light-red;
               color: white;
@@ -217,9 +259,9 @@
       padding: 60px 300px;
       @include box-sizing;
       display: inline-block;
-      border-bottom: 1px solid $dark-grey;
+      //border-bottom: 1px solid $dark-grey;
 
-      
+
       h1{
         text-transform: uppercase;
         color: $dark-grey;
@@ -259,5 +301,12 @@
 
 /*footer*/
 footer{
+  height: 200px;
 
+  #links_footer{
+    height: 100px;
+  }
+  img{
+    float: right;
+  }
 }

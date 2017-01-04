@@ -8,24 +8,53 @@
 /*header*/
 header {
   width: 100%; }
+  header #user_header {
+    margin-left: 80px; }
+    header #user_header ul li {
+      list-style-type: none; }
+  header .clearfix:after {
+    content: "";
+    display: table; }
+  header .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 40, 40, 0.8);
+    z-index: 1;
+    text-align: center;
+    padding: 20px 20px;
+    border: 1px solid rgba(255, 40, 40, 0.8);
+    border-radius: 4px; }
+    header .sub-menu ul li a {
+      color: white; }
   header img {
     width: 80px; }
-  header nav ul li {
-    margin: 40px 60px 0 0px;
-    float: right;
-    list-style-type: none;
-    line-height: 80px; }
-    header nav ul li a {
-      text-transform: uppercase;
-      text-decoration: none;
-      color: black; }
-  header nav ul .links_header {
-    margin-right: 170px; }
-  header nav ul #login_button {
-    border: 1px solid rgba(255, 40, 40, 0.8);
-    padding: 10px 50px;
-    background-color: rgba(255, 40, 40, 0.8);
-    color: white; }
+  header nav {
+    position: relative;
+    display: inline-block; }
+    header nav ul .drop_down:after {
+      content: "\25BC";
+      /*escaped unicode for the down arrow*/
+      font-size: .5em;
+      display: inline;
+      position: relative;
+      bottom: 1px; }
+    header nav ul li.links_header {
+      margin: 40px 70px 0 80px;
+      float: right;
+      list-style-type: none;
+      line-height: 80px;
+      display: inline; }
+      header nav ul li.links_header:hover > ul {
+        display: block; }
+      header nav ul li.links_header a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black; }
+    header nav ul #login_button {
+      border: 1px solid rgba(20, 20, 20, 0.7);
+      padding: 10px 50px;
+      background-color: rgba(255, 40, 40, 0.8);
+      color: white; }
 
 /*index page*/
 #home_banner, #home_banner2 {
@@ -158,8 +187,7 @@ header {
   -moz-box-sizing: border-box;
   /* For legacy (Firefox <29) Gecko based browsers */
   box-sizing: border-box;
-  display: inline-block;
-  border-bottom: 1px solid rgba(20, 20, 20, 0.7); }
+  display: inline-block; }
   .how_sections h1 {
     text-transform: uppercase;
     color: rgba(20, 20, 20, 0.7);
@@ -186,5 +214,11 @@ header {
     padding: 10px 80px 0 0; }
 
 /*footer*/
+footer {
+  height: 200px; }
+  footer #links_footer {
+    height: 100px; }
+  footer img {
+    float: right; }
 
 /*# sourceMappingURL=custom.css.map */
