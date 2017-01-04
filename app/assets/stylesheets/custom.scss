@@ -9,7 +9,8 @@
     $darkerer-red:rgba(255,0,0,.8);
     $darkened-green:rgba(0, 153, 0,.7);
     $button-font-size:1.4em;
-    $dark-grey:rgba(20,20,20,.6);
+    $dark-grey:rgba(20,20,20,.7);
+    $light-grey:rgba(50,50,50,.1);
     $darker-grey:rgba(20,20,20,.8);
     $input-font-size:1.1em;
 
@@ -74,16 +75,15 @@
       }
     }
     #banner_home2{
-      position: absolute;
+
       h2{
         text-transform: uppercase;
         color: white;
         margin-left: 100px;
-        margin-top: -40%;
+
         font-size: 4.0em;
         height: 30px;
         width: 100px;
-        display: block;
 
       }
     }
@@ -145,8 +145,6 @@
         background-color: $darkened-green;
         padding: 20px 70px;
         font-size: $button-font-size;
-
-        clear: both;
       }
 
     }
@@ -206,21 +204,26 @@
       h2{
         font-size: 4em;
         float: right;
-        margin: 0 30px 0 0;
+        margin: 0 0px 0 0;
       }
     }
 
+    .grey{
+      background-color: $light-grey;
+    }
 
     .how_sections{
       width: 100%;
-      padding: 70px 300px;
+      padding: 60px 300px;
       @include box-sizing;
       display: inline-block;
       border-bottom: 1px solid $dark-grey;
+
+      
       h1{
         text-transform: uppercase;
-        margin-bottom: 20px;
         color: $dark-grey;
+        text-align: center;
       }
       .open_box, .closed_box{
 
@@ -232,9 +235,10 @@
       }
       p{
         display: inline-block;
-        width: 80%;
+        width: 100%;
         font-size: 1.3em;
-        text-transform: uppercase;
+        text-align: center;
+        margin-top: 30px;
       }
 
       #how_can_I_help{
@@ -248,6 +252,12 @@
         float: left;
         width: 30%;
         border-right: 1px solid grey;
-        padding-right: 80px;
+        padding: 10px 80px 0 0;
       }
     }
+
+
+/*footer*/
+footer{
+
+}

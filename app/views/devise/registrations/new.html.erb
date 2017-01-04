@@ -4,9 +4,10 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.text_field :first_name, placeholder:"First Name", autofocus: true%>
+    <%= f.text_field :first_name, placeholder:"First Name"%>
     <%= f.text_field :last_name, placeholder:"Last Name"%>
   </div>
+  
   <div class="field">
     <%= f.email_field :email, placeholder:"Email Address"%>
   </div>
@@ -15,7 +16,7 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, placeholder:"Password", autocomplete: "off", autocomplete: "off"%>
+    <%= f.password_field :password, placeholder:"Password", autocomplete: "off"%>
   </div>
 
   <div class="field">
