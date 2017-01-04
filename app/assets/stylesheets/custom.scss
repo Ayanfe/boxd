@@ -13,7 +13,8 @@
     $light-grey:rgba(50,50,50,.1);
     $darker-grey:rgba(20,20,20,.8);
     $input-font-size:1.1em;
-
+    $light-green: rgba(0,150,0,.7);
+    $yellow:#FF9900;
     /*mixins*/
     @mixin box-sizing{
       -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
@@ -41,13 +42,14 @@
       .sub-menu{
         display: none;
         position: absolute;
-        background-color: $light-red;
+        background-color: $yellow;
         z-index: 1;
         text-align: center;
-        padding: 20px 50px;
-        border: 1px solid $light-red;
+        padding: 10px 20px;
+        border: 1px solid $light-grey;
         border-radius: 4px;
         color: white;
+        font-size: 1.2em;
       }
 }
       nav{
@@ -61,6 +63,8 @@
             line-height: 80px;
             display: inline;
             padding: 0;
+            line-height: 30px;
+            margin-top: 65px;
             a{
               text-decoration: none;
               color: white;
@@ -268,6 +272,7 @@
     h2{
       margin: 30px 0;
       text-align: center;
+      text-transform: uppercase;
     }
     #first_name,#password{
       float: left;
@@ -347,6 +352,7 @@
     margin: 20px 0;
     h2{
       margin: 30px 0;
+      text-transform: uppercase;
     }
 
     display: block;
@@ -364,6 +370,7 @@
   }
   h2{
     text-align: center;
+    text-transform: uppercase;
   }
   .field{
     .top,.bottom{
@@ -413,11 +420,11 @@ footer{
   padding: 70px 0px;
   height: 100px;
   width: 100%;
-  background-color: $light-grey;
+  background-color: $yellow;
   #subscribe_boxd{
     display: inline-block;
     width: 400px;
-    margin-left: 18%;
+    margin-left: 12%;
     padding: 20px 20px;
     input{
       text-transform: capitalize;
@@ -430,6 +437,15 @@ footer{
     }
   }
   #links_footer{
+    color: white;
+    text-transform: uppercase;
+
+    a{
+      text-decoration: none;
+      color: white;
+      margin-left: 20px;
+    }
+
     h3{
       display:block;
       text-align: center;
