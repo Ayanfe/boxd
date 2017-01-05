@@ -3,18 +3,27 @@
     <ul class="clearfix">
       <% if user_signed_in?%>
       <li class="drop_down" id="user_header">
-        <%="Hello," + " "+current_user.first_name.capitalize + " " +current_user.last_name.capitalize%>
-        <ul class="sub-menu">
-          <li><%=link_to "Dashboard",'#'%></li>
+
+          <%="Hello," + " "+current_user.first_name.capitalize + " " +current_user.last_name.capitalize%>
+
+        <ul class="sub-menu" id="user_sub_menu">
+          <li><%=link_to "Dashboard", dashboard_path%></li>
           <li><%= link_to "Log out",destroy_user_session_path,:method => :delete%></li>
         </ul>
       </li>
       <%else%>
       <li class="links_header"><%=link_to 'log in', new_user_session_path,id:"login_button"%></li>
       <%end%>
-      <li class="links_header header_links"><%=link_to 'how it works', how_it_works_path%></li>
       <li class="links_header header_links"><%=link_to 'about boxd', about_path%></li>
-      <li class="links_header header_links"><%=link_to 'our meals', our_meals_path%></li>
+      <li class="links_header header_links"><%=link_to 'how it works', how_it_works_path%></li>
+
+      <li class="drop_down" id="meals_menu">
+      <p>our meals</p>
+        <ul class="sub-menu">
+          <li><%=link_to 'Our meals', our_meals_path%></li>
+          <li><%=link_to 'Our plans', our_plans_path%></li>
+        </ul>
+      </li>
       <li class="links_header"><%=link_to image_tag( 0, alt:'BOXD'), index_path%></li>
     </ul>
   </nav>

@@ -8,10 +8,10 @@
 /*header*/
 header {
   width: 100%; }
-  header #user_header {
-    margin-left: 80px; }
-    header #user_header ul li {
-      list-style-type: none; }
+  header #user_header ul li {
+    list-style-type: none; }
+  header #meals_menu ul li {
+    list-style-type: none; }
   header .clearfix:after {
     content: "";
     display: table; }
@@ -25,13 +25,14 @@ header {
     border: 1px solid rgba(50, 50, 50, 0.1);
     border-radius: 4px;
     color: white;
+    margin-left: 60px;
     font-size: 1.2em; }
 
 nav {
   position: relative;
   display: inline-block; }
   nav ul .drop_down {
-    margin: 40px 70px 0 80px;
+    margin: 40px 50px 50px;
     float: right;
     list-style-type: none;
     line-height: 80px;
@@ -51,8 +52,11 @@ nav {
       display: inline;
       position: relative;
       bottom: 1px; }
+    nav ul .drop_down p {
+      display: inline-block;
+      text-transform: uppercase; }
   nav ul li.links_header {
-    margin: 40px 70px 0 80px;
+    margin: 40px 80px 0 50px;
     float: right;
     list-style-type: none;
     line-height: 80px;
@@ -88,7 +92,7 @@ nav {
   height: 30px;
   width: 100px; }
 
-#our_meals_banner {
+#our_plans_banner {
   color: white;
   padding: 20px 50px;
   background-color: rgba(255, 40, 40, 0.8);
@@ -102,7 +106,7 @@ nav {
   text-transform: uppercase;
   text-decoration: none; }
 
-#our_meals_button, #our_meals_button2 {
+#our_plans_button, #our_meals_button2 {
   text-align: center;
   margin: -7% 0 100px 0; }
 
@@ -320,11 +324,12 @@ footer {
   padding: 70px 0px;
   height: 100px;
   width: 100%;
-  background-color: #FF9900; }
+  background-color: #FF9900;
+  clear: both; }
   footer #subscribe_boxd {
     display: inline-block;
-    width: 400px;
-    margin-left: 12%;
+    width: 300px;
+    margin-left: 8%;
     padding: 20px 20px; }
     footer #subscribe_boxd input {
       text-transform: capitalize;
@@ -333,7 +338,7 @@ footer {
       border: 1px solid rgba(255, 40, 40, 0.8);
       width: 100%;
       padding: 20px 20px;
-      height: 30px; }
+      height: 20px; }
   footer #links_footer {
     color: white;
     text-transform: uppercase;
