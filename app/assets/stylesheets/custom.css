@@ -56,7 +56,7 @@ nav {
       display: inline-block;
       text-transform: uppercase; }
   nav ul li.links_header {
-    margin: 40px 80px 0 50px;
+    margin: 40px 30px 0 100px;
     float: right;
     list-style-type: none;
     line-height: 80px;
@@ -69,7 +69,8 @@ nav {
     border: 1px solid rgba(20, 20, 20, 0.7);
     padding: 10px 50px;
     background-color: rgba(255, 40, 40, 0.8);
-    color: white; }
+    color: white;
+    margin-left: 150px; }
 
 /*index page*/
 #home_banner, #home_banner2 {
@@ -242,7 +243,8 @@ nav {
       text-transform: uppercase;
       color: white; }
   .new_user_form #login_shared {
-    display: block; }
+    display: block;
+    margin-bottom: 30px; }
     .new_user_form #login_shared a {
       border: 1px solid rgba(255, 40, 40, 0.8);
       background-color: rgba(255, 0, 0, 0.8);
