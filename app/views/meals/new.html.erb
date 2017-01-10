@@ -1,0 +1,22 @@
+<% provide(:title,"Add meal")%>
+
+<div id="new_meal_form_holder">
+  <%= form_for(:meal,url: meals_new_path, :html =>{:multipart => true}) do |m|%>
+
+
+
+
+  <p>
+  <%= m.label :photo, "Image File" %>
+  <%= m.file_field :photo %>
+  </p>
+
+
+  <%= m.text_field :name, id:"image_name"%>
+  <%= m.text_field :ingredients,id:"image_ingredients"%>
+
+  <%= m.submit "Add meal"%>
+
+</div>
+
+<%end%>

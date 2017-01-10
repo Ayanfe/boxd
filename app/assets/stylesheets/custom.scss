@@ -15,6 +15,8 @@
     $input-font-size:1.1em;
     $light-green: rgba(0,150,0,.7);
     $yellow:#FF9900;
+    $input-height:80px;
+    $input-padding: 20px 30px;
     /*mixins*/
     @mixin box-sizing{
       -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
@@ -22,7 +24,14 @@
              box-sizing: border-box;
     }
 
+/*notices*/
+#notice{
+  width: 400px;
+  margin: auto;
+  display: block;
+  text-align: center;
 
+}
     /*header*/
  header{
       width: 100%;
@@ -126,15 +135,7 @@
 
     }
     #banner_home{
-      #text_banner1{
-        text-align: center;
-        position: absolute;
-        top: 300px;
-        left: 130px;
-        color: white;
-        text-transform: uppercase;
-        font-size: 1.9em;
-      }
+
     }
     #banner_home2{
 
@@ -396,10 +397,10 @@
       display: block;
       @include box-sizing;
       width: 100%;
-      height: 80px;
+      height:$input-height;
       border: 1px solid $light-red;
       border-radius: 5px;
-      padding: 20px 30px;
+      padding: $input-padding;
       margin: 50px 0 30px 0;
       font-size: 1.3em;
       text-transform: capitalize;
@@ -430,7 +431,57 @@
 
 
 }
+#sign_in_error{
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: black;
 }
+}
+
+/*new meals*/
+#new_meal_form_holder{
+  width: 400px;
+  margin: auto;
+  input{
+    width: 100%;
+    border: 1px solid $light-red;
+  }
+  input[type=file]{
+    height: 50px;
+    height: 50px;
+    border: 1px solid $light-red;
+  }
+}
+
+/*confirmations page*/
+#confirmation_form_holder{
+  width: 800px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 150px;
+  input{
+    width: 100%;
+    height: $input-height;
+    padding: $input-padding;
+    @include box-sizing;
+    border-radius: 5px;
+    border: 1px solid $light-red;
+    margin-top: 70px;
+    font-size: 1.3em;
+  }
+
+  input[type=submit]{
+    background-color: $light-red;
+    border: none;
+    color: white;
+    font-size: $button-font-size;
+  }
+
+}
+
 /*footer*/
 footer{
   padding: 70px 0px;

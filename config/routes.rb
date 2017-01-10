@@ -1,13 +1,25 @@
 Rails.application.routes.draw do
 
 
-  devise_for :users, :controllers => {registrations: 'registrations', sessions: 'sessions'}
+  get '/meals_new', to: 'meals#new'
+  post '/meals_new', to: 'meals#new'
+
+  get 'meals_create', to: 'meals#create'
+  post 'meals_create', to: 'meals#create'
+
+  get 'meals_edit', to: 'meals#edit'
+  post 'meals_edit', to: 'meals#edit'
+
+  get 'meals_update', to: 'meals#2update'
+  post 'meals_update', to: 'meals#2update'
+
+  devise_for :users, :controllers => {registrations: 'registrations', sessions: 'sessions',confirmations: 'confirmations'}
 
   root 'static_pages#index'
 
   get '/index', to: 'static_pages#index'
 
-  get '/meals', to:'static_pages#meals', as: 'our_meals'
+  get '/meals', to:'meals#index', as: 'our_meals'
 
   get '/about', to: 'static_pages#about'
 
