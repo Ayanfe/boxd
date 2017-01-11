@@ -482,6 +482,30 @@
 
 }
 
+/*Edit account information*/
+#edit_account_form_holder{
+  width: 800px;
+  margin: auto;
+  text-align: center;
+  input{
+    width: 100%;
+    height: $input-height;
+    padding: $input-padding;
+    font-size: $input-font-size;
+    border: 1px solid $light-red;
+    border-radius: 5px;
+    @include box-sizing;
+    margin-top: 50px;
+    }
+
+    input[type=submit]{
+      margin-bottom: 30px;
+      background-color: $light-red;
+      font-size: $button-font-size;
+      color: white;
+    }
+}
+
 /*footer*/
 footer{
   padding: 70px 0px;

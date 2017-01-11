@@ -1,1 +1,3 @@
 <%provide(:title,current_user.first_name + " " + current_user.last_name)%>
+
+<%= button_to "delete my account", registration_path(:user), data: { confirm: "Are you sure?" }, method: :delete %>
