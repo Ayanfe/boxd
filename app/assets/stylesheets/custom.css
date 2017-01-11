@@ -364,11 +364,12 @@ nav {
     font-size: 1.4em; }
 
 /*Edit account information*/
-#edit_account_form_holder {
+#edit_account_form_holder, #forgot_password_form_holder {
   width: 800px;
   margin: auto;
-  text-align: center; }
-  #edit_account_form_holder input {
+  text-align: center;
+  margin-bottom: 150px; }
+  #edit_account_form_holder input, #forgot_password_form_holder input {
     width: 100%;
     height: 80px;
     padding: 20px 30px;
@@ -381,11 +382,13 @@ nav {
     /* For legacy (Firefox <29) Gecko based browsers */
     box-sizing: border-box;
     margin-top: 50px; }
-  #edit_account_form_holder input[type=submit] {
+  #edit_account_form_holder input[type=submit], #forgot_password_form_holder input[type=submit] {
     margin-bottom: 30px;
     background-color: rgba(255, 40, 40, 0.8);
     font-size: 1.4em;
     color: white; }
+  #edit_account_form_holder ul li, #forgot_password_form_holder ul li {
+    list-style-type: none; }
 
 /*footer*/
 footer {
