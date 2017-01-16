@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+
+  before_filter :authenticate_user!, only: [:dashboard]
+  
   def index
   end
 
@@ -12,5 +15,9 @@ class StaticPagesController < ApplicationController
   end
 
   def plans
+  end
+
+  def dashboard
+
   end
 end
