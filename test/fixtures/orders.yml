@@ -1,7 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  order_id: MyString
+  subtotal: 1
+  delivery: 1
+  total: 1
+  order_status: one
 
 two:
-  order_id: MyString
+  subtotal: 1
+  delivery: 1
+  total: 1
+  order_status: two

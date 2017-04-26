@@ -70,6 +70,10 @@
         margin-left: 60px;
         font-size: 1.2em;
       }
+
+      #user_sub_menu {
+              width: 250px;
+      }
 }
       nav{
         position: relative;
@@ -79,7 +83,7 @@
             margin: 40px 50px 50px;
             float: right;
             list-style-type: none;
-            line-height: 80px;
+            // line-height: 110px;
             display: inline;
             padding: 0;
             line-height: 30px;

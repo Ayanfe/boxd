@@ -1,1 +1,8 @@
-<%provide(:title, "Our Meals")%>
+
+<div>
+  <div>
+    <% @meals.each do |meal| %>
+      <%= render "meal_row", meal: meal, order_item: @order_item %>
+    <% end %>
+  </div>
+</div>

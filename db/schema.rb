@@ -10,34 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105225753) do
-
-  create_table "addresses", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "meal_images", force: :cascade do |t|
-    t.integer  "meal_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-  end
+ActiveRecord::Schema.define(version: 20170422180034) do
 
   create_table "meals", force: :cascade do |t|
     t.string   "name"
-    t.string   "ingredients"
+    t.integer  "price"
+    t.boolean  "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "image"
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "meal_id"
+    t.integer  "order_id"
+    t.integer  "unit_price"
+    t.integer  "quantity"
+    t.integer  "total_price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["meal_id"], name: "index_order_items_on_meal_id"
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+  end
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string   "order_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "subtotal"
+    t.integer  "delivery"
+    t.integer  "total"
+    t.integer  "order_status_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "customer_name"
+    t.string   "string"
+    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
   end
 
   create_table "users", force: :cascade do |t|

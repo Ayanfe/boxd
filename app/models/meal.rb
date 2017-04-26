@@ -1,5 +1,6 @@
-class Meal < ApplicationRecord
-  @meal = Meal.new
-  has_one :meal_image, :dependent => :destroy
-  accepts_nested_attributes_for :meal_image, :reject_if => lambda { |t| t['trip_image'].nil? }
+class Meal < ActiveRecord::Base
+  mount_uploader :image, ImageUploader
+  has_many :order_items
+
+  default_scope { where(active: true) }
 end

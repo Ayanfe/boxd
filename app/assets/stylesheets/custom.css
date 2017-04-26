@@ -34,6 +34,8 @@ header {
     color: white;
     margin-left: 60px;
     font-size: 1.2em; }
+  header #user_sub_menu {
+    width: 250px; }
 
 nav {
   position: relative;
@@ -42,7 +44,6 @@ nav {
     margin: 40px 50px 50px;
     float: right;
     list-style-type: none;
-    line-height: 80px;
     display: inline;
     padding: 0;
     line-height: 30px;

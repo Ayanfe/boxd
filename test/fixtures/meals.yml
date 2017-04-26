@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  ingredients: MyString
+  price: 1
+  active: false
 
 two:
   name: MyString
-  ingredients: MyString
+  price: 1
+  active: false

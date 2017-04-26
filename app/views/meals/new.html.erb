@@ -1,22 +1,30 @@
-<% provide(:title,"Add meal")%>
+<%= form_for @meal, html: {multipart: true}, url: {action: "create"} do |f|%>
+  <% if @meal.errors.any?%>
+  <div id="error_explanation">
+    <h2><%= pluralize(@meal.errors.count, "error")%> Stopped this meal from being saved:</h2>
 
-<div id="new_meal_form_holder">
-  <%= form_for(:meal,url: meals_new_path, :html =>{:multipart => true}) do |m|%>
+    <ul>
+      <%= @meal.errors.full_messages.each do |message|%>
+        <li><%message%></li>
+      <%end%>
+    </ul>
+  </div>
+  <%end%>
 
+  <ul>
+    <% if f.object.image?%>
+      <%= image_tag f.object.image.thumb.url%>
+      <%= f.label :remove_image%>
+      <%= check_box :remove_image%>
+    <%end%>
 
-
-
-  <p>
-  <%= m.label :photo, "Image File" %>
-  <%= m.file_field :photo %>
-  </p>
-
-
-  <%= m.text_field :name, id:"image_name"%>
-  <%= m.text_field :ingredients,id:"image_ingredients"%>
-
-  <%= m.submit "Add meal"%>
-
-</div>
-
+    <li><%= f.file_field :image, placeholder: "image" %></li>
+    <li><%= f.text_field :name, placeholder: "name"%></li>
+    <li><%= f.number_field :price, placeholder: "price"%></li>
+    <li>
+      <%= f.label :active%>
+      <%= f.check_box :active%>
+    </li>
+    <li><%= f.submit "Done"%></li>
+  </ul>
 <%end%>

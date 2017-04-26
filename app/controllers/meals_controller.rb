@@ -1,33 +1,50 @@
 class MealsController < ApplicationController
-  def new
-    @meal = Meal.new
-    1.times {@meal.build_meal_image}
+  def index
+    @meals = Meal.all
+    @order_item = current_order.order_items.new
   end
 
+  def new
+    @meal = Meal.new
+  end
+
+  def show
+    @meal = Meal.find(params[:id])
+
+  end
 
   def create
-    @meal = Meal.new(params[:meal])
+    @meal = Meal.new(meal_params)
     if @meal.save
-      flash[:notice] = "Successfully added meal"
       redirect_to @meal
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 
   def edit
     @meal = Meal.find(params[:id])
-    3.times { @meal.build_meal_images }
   end
 
   def update
-
     @meal = Meal.find(params[:id])
-    if @meal.update_attributes(params[:trip])
-    flash[:notice] = "Successfully updated meal."
+    @meal.update!(meal_params)
     redirect_to @meal
+  end
+
+  def destroy
+    @meal = Meal.find(params[:id])
+    if @meal.destroy
+      redirect_to 'index'
     else
-    render :action => 'edit'
+      render 'show'
     end
+
+  end
+
+  private
+
+  def meal_params
+    params.require(:meal).permit(:name, :price, :active, :image)
   end
 end
