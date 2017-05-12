@@ -1,10 +1,10 @@
+/*variables*/
+/*mixins*/
 * {
   border: 0px;
   margin: 0px;
-  font-family: sans-serif; }
+  font-family: "courier new"; }
 
-/*variables*/
-/*mixins*/
 /*notices*/
 #notice {
   width: 400px;
@@ -15,10 +15,10 @@
 /*header*/
 header {
   width: 100%; }
-  header #user_header ul li {
-    list-style-type: none; }
-  header #meals_menu ul li {
-    list-style-type: none; }
+  header #meals_menu #meals_sub_menu {
+    width: 140px;
+    margin-left: -20px;
+    width: 150px; }
   header .clearfix:after {
     content: "";
     display: table; }
@@ -32,53 +32,72 @@ header {
     border: 1px solid rgba(50, 50, 50, 0.1);
     border-radius: 4px;
     color: white;
-    margin-left: 60px;
-    font-size: 1.2em; }
+    margin-left: -50px;
+    font-size: 1em;
+    margin-top: 7px;
+    text-transform: uppercase; }
+    header .sub-menu li {
+      list-style-type: none;
+      margin: 30px 0px; }
   header #user_sub_menu {
-    width: 250px; }
+    width: 350px; }
 
 nav {
   position: relative;
   display: inline-block; }
-  nav ul .drop_down {
-    margin: 40px 50px 50px;
-    float: right;
-    list-style-type: none;
-    display: inline;
-    padding: 0;
-    line-height: 30px;
-    margin-top: 65px; }
-    nav ul .drop_down a {
-      text-decoration: none;
-      color: white; }
-    nav ul .drop_down:hover > ul {
-      display: block; }
-    nav ul .drop_down:after {
-      content: "\25BC";
-      /*escaped unicode for the down arrow*/
-      font-size: .5em;
+  nav #nav_logo {
+    margin-top: 30px;
+    text-align: center;
+    height: 40px;
+    display: block; }
+  nav ul {
+    margin: 40px 0; }
+    nav ul .drop_down {
+      margin: 40px 80px 50px 70px;
+      float: right;
+      list-style-type: none;
+      letter-spacing: 5px;
       display: inline;
-      position: relative;
-      bottom: 1px; }
-    nav ul .drop_down p {
-      display: inline-block;
-      text-transform: uppercase; }
-  nav ul li.links_header {
-    margin: 40px 30px 0 100px;
-    float: right;
-    list-style-type: none;
-    line-height: 80px;
-    display: inline; }
-    nav ul li.links_header a {
-      text-transform: uppercase;
-      text-decoration: none;
-      color: black; }
-  nav ul #login_button {
-    border: 1px solid rgba(20, 20, 20, 0.7);
-    padding: 10px 50px;
-    background-color: rgba(255, 40, 40, 0.8);
-    color: white;
-    margin-left: 150px; }
+      padding: 0;
+      line-height: 0px;
+      margin-top: 65px;
+      color: grey; }
+      nav ul .drop_down a {
+        text-decoration: none;
+        color: white; }
+      nav ul .drop_down:hover > ul {
+        display: block; }
+      nav ul .drop_down:after {
+        content: "\25BC";
+        /*escaped unicode for the down arrow*/
+        font-size: .5em;
+        display: inline;
+        position: relative;
+        bottom: 1px; }
+      nav ul .drop_down p {
+        display: inline-block;
+        text-transform: uppercase; }
+    nav ul li.links_header {
+      margin: 40px 100px 0 10px;
+      float: right;
+      list-style-type: none;
+      line-height: 50px;
+      display: inline;
+      letter-spacing: 7px; }
+      nav ul li.links_header a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: grey; }
+    nav ul #login_button {
+      border: 1px solid rgba(255, 0, 0, 0.8);
+      padding: 10px 80px;
+      color: rgba(255, 0, 0, 0.8);
+      margin-left: 40px;
+      letter-spacing: 20px;
+      transition: .5s; }
+      nav ul #login_button:hover {
+        color: white;
+        background-color: rgba(255, 0, 0, 0.8); }
 
 /*index page*/
 #home_banner, #home_banner2 {
@@ -124,7 +143,7 @@ nav {
     text-transform: uppercase;
     float: right;
     text-align: center;
-    margin: 100px 250px 60px 0;
+    margin: 100px 260px 60px 0;
     color: rgba(20, 20, 20, 0.7);
     font-stretch: extra-expanded;
     font-size: 1.4em; }
@@ -173,7 +192,8 @@ nav {
   .how_sections h1 {
     text-transform: uppercase;
     color: rgba(20, 20, 20, 0.7);
-    text-align: center; }
+    text-align: center;
+    letter-spacing: 4px; }
   .how_sections .open_box, .how_sections .closed_box {
     width: 200px; }
   .how_sections .closed_box {
@@ -183,7 +203,8 @@ nav {
     width: 100%;
     font-size: 1.3em;
     text-align: center;
-    margin-top: 30px; }
+    margin-top: 30px;
+    letter-spacing: 3px; }
   .how_sections #how_can_I_help {
     width: 300px; }
   .how_sections .right_side {
@@ -433,6 +454,7 @@ footer {
     margin-top: 20px;
     display: inline-block;
     float: left;
+    letter-spacing: 5px;
     display: inline-block;
     height: 100px;
     margin-left: 30px; }

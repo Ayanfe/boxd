@@ -1,17 +1,4 @@
 class MealsController < ApplicationController
-  def index
-    @meals = Meal.all
-    @order_item = current_order.order_items.new
-  end
-
-  def new
-    @meal = Meal.new
-  end
-
-  def show
-    @meal = Meal.find(params[:id])
-
-  end
 
   def create
     @meal = Meal.new(meal_params)
@@ -21,6 +8,29 @@ class MealsController < ApplicationController
       render 'new'
     end
   end
+
+  def new
+    @meal = Meal.new
+  end
+
+  def index
+    @meals = Meal.all
+    @order_item = current_order.order_items.new
+  end
+
+  def food_to_go
+    @meals = Meal.where("available_now == ?", "true")
+  end
+
+
+  def show
+    @meal = Meal.find(params[:id])
+    @meal.order_items.each do |oi|
+      @order_item = oi
+    end
+  end
+
+
 
   def edit
     @meal = Meal.find(params[:id])
@@ -45,6 +55,6 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:name, :price, :active, :image)
+    params.require(:meal).permit(:name, :price, :active, :image,:quantity,:meal_id,:ingredients)
   end
 end

@@ -1,23 +1,30 @@
-<div >
+<div class="meal_card">
+  <ul>
+    <li>
+      <div id="meal_card_top">
+        <%= link_to (image_tag meal.image.thumb.url, id: "meal_image"), meal%>
+      </div>
+    </li>
+    <li>
+      <div id="meal_card_bottom">
+            <%= form_for order_item, remote: true do |f| %>
 
-  <div>
-    <div >
-      <%= link_to (image_tag meal.image.thumb.url, id: "cart_image"), meal%>
-      <h4><%= meal.name %></h4>
-    </div>
-    <div>
+            <h4><%= meal.name %></h4>
+            <h4 class="text-right">Price:<%= number_to_currency( meal.price, unit: "N") %></h4>
+            <%if user_signed_in?%>
+              <div >
+                <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+                <div>
+                  <%= f.hidden_field :meal_id, value: meal.id %>
+                  <%= f.submit "Add to Cart"%>
+                </div>
+              </div>
+              <%else%>
+              <%= link_to "Sign in to purchase", new_user_session_path, id: "sign_in_store"%>
+            <%end%>
+            <% end %>
+      </div>
+    </li>
+  </ul>
 
-      <%= form_for order_item, remote: true do |f| %>
-      <h4 class="text-right">Price:<%= number_to_currency meal.price %></h4>
-        <div >
-          <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
-          <div>
-            <%= f.hidden_field :meal_id, value: meal.id %>
-            <%= f.submit "Add to Cart"%>
-          </div>
-        </div>
-      <% end %>
-    </div>
-
-  </div>
 </div>

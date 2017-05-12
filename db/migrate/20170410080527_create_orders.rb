@@ -4,7 +4,8 @@ class CreateOrders < ActiveRecord::Migration[5.0]
       t.integer :subtotal
       t.integer :delivery
       t.integer :total
-      t.references :order_status, foreign_key: true
+      t.integer :status, null: false, default: 0
+      t.integer :user_id
 
       t.timestamps
     end

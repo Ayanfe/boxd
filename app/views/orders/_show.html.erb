@@ -1,0 +1,19 @@
+<%@orders.each do |o|%>
+  <div id="order_holder">
+    <h1>Customer name: <%= o.customer_name%></h1>
+    <p>Order Id: <%=o.id%></p>
+    <p>Created at: <%=o.created_at%></p>
+    <p>Order status id: <%=o.status%></p>
+    <% o.order_items.each do |oi|%>
+    <br>
+      <ul>
+        <h3><li>Item name: <%=oi.meal.name%></li></h3>
+        <h3><li>Quantity: <%=oi.quantity%></li></h3>
+        <h3><li>Price: <%=oi.meal.price%></li></h3>
+      </ul>
+      <br>
+    <%end%>
+    <h2>Total: <%= o.subtotal%></h2>
+    <h1>To be delivered to: <%= %></h1>
+  </div>
+<%end%>

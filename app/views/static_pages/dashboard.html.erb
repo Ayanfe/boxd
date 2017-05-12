@@ -1,3 +1,8 @@
-<%provide(:title,current_user.first_name + " " + current_user.last_name)%>
-
-<%= button_to "delete my account", registration_path(:user), data: { confirm: "Are you sure?" }, method: :delete %>
+<%if user_signed_in?%>
+  <%provide(:title,current_user.first_name + " " + current_user.last_name)%>
+  <%=link_to "My Orders", orders_path%>
+  <%= button_to "delete my account", registration_path(:user), data: { confirm: "Are you sure?" }, method: :delete %>
+<%elsif admin_signed_in?%>
+  <%provide(:title,current_admin.first_name + " " + current_admin.last_name)%>
+  <%=link_to "Orders", orders_path%>
+<%end%>

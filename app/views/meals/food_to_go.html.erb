@@ -1,0 +1,8 @@
+<% provide(:title, "Available Now")%>
+<div>
+  <div class="meal_holder">
+    <% @meals.each do |meal| %>
+      <%= render "meal_row", meal: meal, order_item: @order_item %>
+    <% end %>
+  </div>
+</div>

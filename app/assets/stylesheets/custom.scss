@@ -1,27 +1,9 @@
+@import "variables.scss";
+
     *{
       border:0px;
       margin: 0px;
-      font-family:sans-serif;
-    }
-
-    /*variables*/
-    $light-red:rgba(255,40,40,.8);
-    $darkerer-red:rgba(255,0,0,.8);
-    $darkened-green:rgba(0, 153, 0,.7);
-    $button-font-size:1.4em;
-    $dark-grey:rgba(20,20,20,.7);
-    $light-grey:rgba(50,50,50,.1);
-    $darker-grey:rgba(20,20,20,.8);
-    $input-font-size:1.1em;
-    $light-green: rgba(0,150,0,.7);
-    $yellow:#FF9900;
-    $input-height:80px;
-    $input-padding: 20px 30px;
-    /*mixins*/
-    @mixin box-sizing{
-      -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
-        -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
-             box-sizing: border-box;
+      font-family: $courier;
     }
 
 /*notices*/
@@ -38,20 +20,15 @@
 
       #user_header{
 
-        ul{
-          li{
-            list-style-type: none;
-          }
-        }
-
       }
       #meals_menu{
 
-        ul{
-          li{
-            list-style-type: none;
-          }
+        #meals_sub_menu{
+          width: 140px;
+          margin-left: -20px;
+          width:150px;
         }
+
       }
       .clearfix:after {
         content: "";
@@ -67,27 +44,43 @@
         border: 1px solid $light-grey;
         border-radius: 4px;
         color: white;
-        margin-left: 60px;
-        font-size: 1.2em;
+        margin-left: -50px;
+        font-size: 1em;
+        margin-top: 7px;
+        text-transform: uppercase;
+
+          li{
+            list-style-type: none;
+            margin: 30px 0px;
+          }
       }
 
       #user_sub_menu {
-              width: 250px;
+          width: 350px;
       }
 }
       nav{
         position: relative;
         display: inline-block;
+        #nav_logo{
+          margin-top: 30px;
+          text-align: center;
+          height: 40px;
+          display: block;
+        }
+
         ul{
+          margin: 40px 0;
           .drop_down{
-            margin: 40px 50px 50px;
+            margin: 40px 80px 50px 70px;
             float: right;
             list-style-type: none;
-            // line-height: 110px;
+            letter-spacing: 5px;
             display: inline;
             padding: 0;
-            line-height: 30px;
+            line-height: 0px;
             margin-top: 65px;
+            color: grey;
             a{
               text-decoration: none;
               color: white;
@@ -108,24 +101,32 @@
             }
           }
             li.links_header{
-              margin: 40px 30px 0 100px;
+              // margin: 40px 30px 0 10px;
+              margin: 40px 100px 0 10px;
               float: right;
               list-style-type: none;
-              line-height: 80px;
+              line-height: 50px;
               display: inline;
+              letter-spacing: 7px;
 
               a{
                 text-transform: uppercase;
                 text-decoration: none;
-                color: black;
+                color: grey;
               }
             }
             #login_button{
-              border: 1px solid $dark-grey;
-              padding: 10px 50px;
-              background-color: $light-red;
-              color: white;
-              margin-left: 150px;
+              border: 1px solid $darkerer-red;
+              padding: 10px 80px;
+              color: $darkerer-red;
+              margin-left: 40px;
+              letter-spacing: 20px;
+              transition: .5s;
+
+              &:hover{
+                color: white;
+                background-color: $darkerer-red;
+              }
             }
           }
 
@@ -190,7 +191,7 @@
         text-transform: uppercase;
         float: right;
         text-align: center;
-        margin: 100px 250px 60px 0;
+        margin: 100px 260px 60px 0;
         color: $dark-grey;
         font-stretch: extra-expanded;
         font-size: 1.4em;
@@ -249,6 +250,7 @@
         text-transform: uppercase;
         color: $dark-grey;
         text-align: center;
+        letter-spacing: 4px;
       }
       .open_box, .closed_box{
 
@@ -264,6 +266,7 @@
         font-size: 1.3em;
         text-align: center;
         margin-top: 30px;
+        letter-spacing: 3px;
       }
 
       #how_can_I_help{
@@ -573,6 +576,7 @@ footer{
     margin-top: 20px;
     display: inline-block;
     float: left;
+    letter-spacing: 5px;
     a{
       text-decoration: none;
       color: white;

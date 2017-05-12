@@ -1,0 +1,42 @@
+
+<div id="meal_holder">
+  <div class="meal_card">
+    <ul>
+      <li>
+        <div id="meal_card_top">
+          <%= image_tag @meal.image.thumb.url, id: "meal_image"%>
+        </div>
+      </li>
+      <li>
+        <div id="meal_card_bottom">
+          <h2><%= @meal.name.upcase %></h2>
+          <h4 class="text-right">Price:<%= number_to_currency( @meal.price, unit: "N") %></h4>
+          <p>Ingredients: <%=@meal.ingredients.upcase%></p>
+        </div>
+      </li>
+    </ul>
+    <% if admin_signed_in?%>
+      <%= link_to 'Edit', meal_edit_path(@meal) %> |
+      <%= link_to 'Back', meal_path %>
+    <%end%>
+
+  </div>
+
+  <div id="add_to_cart_ms">
+    <% if user_signed_in?%>
+      <%= form_for @meal, remote: true, url:{ action:"create", controller: "order_items"} do |f| %>
+      <%= f.number_field :quantity, value:1, min: 1%>
+        <div>
+          <%= f.hidden_field :price, value: @meal.price %>
+          <%= f.hidden_field :order_item, value: @meal.order_items %>
+          <%= f.hidden_field :meal_id, value: @meal.id %>
+          <%= f.submit "Add to Cart"%>
+        </div>
+      <%end%>
+    <% end %>
+  </div>
+
+
+
+
+</div>
