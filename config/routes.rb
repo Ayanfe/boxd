@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   patch '/meals/:id', to: 'meals#update'
   put '/meals/:id', to: 'meals#update'
   delete '/meals/:id', to: 'meals#destroy'
-  get '/availablenow', to: 'meals#food_to_go'
+
 
 
   get '/orders', to: 'orders#show'

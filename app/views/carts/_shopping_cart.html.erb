@@ -9,14 +9,15 @@
     </div>
   <% end %>
   <% if @order_items.size == 0 %>
+  <div class="empty_shopping_cart">
     <p class="text-center">
       There are no items in your shopping cart.  Please go head to <%= link_to "our meals", meals_path %> and add some items to your cart.
     </p>
+  </div>
   <% else %>
      <div class="shopping_cart">
         <% @order_items.each do |order_item| %>
         <%= render 'carts/cart_row', meal: order_item.meal, order_item: order_item, show_total: true %>
-        <hr>
         <% end %>
     </div>
   <%end%>

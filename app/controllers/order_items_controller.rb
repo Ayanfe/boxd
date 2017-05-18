@@ -1,5 +1,5 @@
 class OrderItemsController < ApplicationController
-  before_action :authenticate_user!
+  before_filter :authenticate_user!
 
   def show
     render 'carts/show'
@@ -29,6 +29,6 @@ class OrderItemsController < ApplicationController
 
 private
   def order_item_params
-    params.require(:order_item).permit(:quantity, :meal_id)
+    params.require(:order_item).permit(:quantity, :meal_id,:order_item)
   end
 end

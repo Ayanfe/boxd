@@ -14,20 +14,16 @@ class MealsController < ApplicationController
   end
 
   def index
-    @meals = Meal.all
+    @meals = Meal.all.search(params[:search]).paginate(page: params[:page], per_page: 8)
     @order_item = current_order.order_items.new
   end
-
-  def food_to_go
-    @meals = Meal.where("available_now == ?", "true")
-  end
-
 
   def show
     @meal = Meal.find(params[:id])
     @meal.order_items.each do |oi|
       @order_item = oi
     end
+
   end
 
 

@@ -30,7 +30,7 @@
   height: 600px;
   clear: both;
   margin-bottom: 300px;
-  padding: 100px 20px; }
+  padding: 100px 0px; }
   .meal_holder .meal_card {
     display: block;
     float: left;
@@ -38,7 +38,7 @@
     height: 380px;
     border: 1px solid rgba(255, 40, 40, 0.8);
     border-radius: 10px;
-    padding: 0;
+    margin-bottom: 40px;
     text-align: center;
     margin-left: 30px; }
     .meal_holder .meal_card ul {
@@ -64,17 +64,21 @@
       border-radius: 0px 0px 10px 10px;
       padding: 20px 0px;
       color: white; }
+      .meal_holder .meal_card #meal_card_bottom a {
+        text-decoration-color: #FF9900;
+        color: white;
+        text-transform: uppercase;
+        font-style: oblique;
+        font-size: 1.3em; }
 
 #meal_holder {
   width: 800px;
-  margin: auto;
-  padding: 50px 100px; }
+  margin: auto; }
   #meal_holder .meal_card {
     display: block;
     float: left;
     width: 800px;
     height: 680px;
-    margin: auto;
     border: 1px solid rgba(255, 40, 40, 0.8);
     border-radius: 10px;
     padding: 0;
@@ -103,5 +107,26 @@
       border-radius: 0px 0px 10px 10px;
       padding: 20px 0px;
       color: white; }
+
+#search_bar {
+  width: 800px;
+  margin: auto;
+  padding: 50px 0px; }
+  #search_bar input[type="text"] {
+    border: 1px solid rgba(255, 40, 40, 0.8);
+    width: 80%;
+    padding: 20px 10px;
+    border-radius: 20px;
+    font-size: 1.2em; }
+  #search_bar input[type="submit"] {
+    background-color: rgba(255, 40, 40, 0.8);
+    padding: 20px 40px;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.2em; }
+
+#does_not_exist {
+  text-align: center;
+  padding: 200px 0px; }
 
 /*# sourceMappingURL=meals.css.map */

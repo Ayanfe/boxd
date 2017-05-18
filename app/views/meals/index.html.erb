@@ -1,8 +1,26 @@
+
 <% provide(:title, "Our Meals")%>
+<div id="search_bar">
+  <%=form_tag meals_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search],placeholder: "Search" %>
+      <%= submit_tag "Go", :name => nil %>
+    </p>
+  <% end %>
+</div>
+
 <div>
+  <% if @meals.blank?%>
+  <div id="does_not_exist">
+        <h1>Sorry that meal does not exist right now :(, try searching for something else or go to <%=link_to("our meals", meals_path)%></h1>
+  </div>
+  <%else%>
   <div class="meal_holder">
     <% @meals.each do |meal| %>
       <%= render "meal_row", meal: meal, order_item: @order_item %>
     <% end %>
+    <%= will_paginate @products %>
+    <%end%>
   </div>
+
 </div>

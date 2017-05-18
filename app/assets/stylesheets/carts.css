@@ -2,7 +2,8 @@
 /*mixins*/
 #cart_holder {
   width: 1000px;
-  margin: auto; }
+  margin: auto;
+  padding: 50px 0px; }
   #cart_holder .shopping_cart {
     box-shadow: 0px 0px 30px 0px #000;
     width: 60%;
@@ -11,6 +12,9 @@
     padding: 30px 20px;
     border: 1px solid rgba(255, 0, 0, 0.8);
     margin-bottom: 30px; }
+  #cart_holder .empty_shopping_cart {
+    width: 100%;
+    padding: 150px 0px; }
   #cart_holder #cart_row {
     width: 100%;
     clear: both;
@@ -68,9 +72,8 @@
   display: block;
   float: right;
   border: 1px solid rgba(255, 0, 0, 0.8);
-  position: fixed;
   padding: 10px 0px;
-  margin-left: 70%; }
+  margin-right: 100px; }
   #checkout_aside #checkout_button {
     margin-top: 30px; }
   #checkout_aside a {

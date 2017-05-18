@@ -604,3 +604,14 @@ footer{
   }
 
 }
+
+.pagination {
+  text-align: center;
+  margin-bottom: 40px;
+  clear: both;
+  .previous_page { background:$darkerer-red; color:white; }
+  .previous_page.disabled { background: white; color: $darkerer-red; }
+  .current { background: $boxd-gold; border: 1px solid $darkerer-red;}
+  .next_page { background: $darkerer-red; color: white; }
+  .next_page.disabled { background: white; color: #777; }
+}

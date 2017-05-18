@@ -6,6 +6,7 @@
 #cart_holder{
   width: 1000px;
   margin: auto;
+  padding: 50px 0px;
 
 
   .shopping_cart{
@@ -16,6 +17,11 @@
     padding: 30px 20px;
     border: 1px solid $darkerer-red;
     margin-bottom: 30px;
+  }
+
+  .empty_shopping_cart{
+    width: 100%;
+    padding: 150px 0px;
   }
 
     #cart_row{
@@ -95,9 +101,8 @@
     display: block;
     float: right;
     border: 1px solid $darkerer-red;
-    position: fixed;
     padding: 10px 0px;
-    margin-left: 70%;
+    margin-right: 100px;
 
     #checkout_button{
       margin-top: 30px;

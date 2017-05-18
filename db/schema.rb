@@ -42,8 +42,7 @@ ActiveRecord::Schema.define(version: 20170508185056) do
     t.integer  "meal_id"
     t.integer  "quantity"
     t.string   "ingredients"
-    t.string   "available_now"
-    t.string   "boolean"
+    t.boolean  "available_now"
   end
 
   create_table "order_items", force: :cascade do |t|
