@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,aAAa;AAkBb,UAAU;ACbV,eAAe;EACb,gBAAgB,EDJJ,oBAAgB;ECK5B,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,SAAS;EAClB,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,OAAO",
+"sources": ["variables.scss","static_pages.scss"],
 "names": [],
 "file": "static_pages.css"
 }

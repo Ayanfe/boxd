@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-
+  before_filter :authenticate_admin!, only: [:create, :new, :edit, :update, :destroy]
   def create
     @meal = Meal.new(meal_params)
     if @meal.save

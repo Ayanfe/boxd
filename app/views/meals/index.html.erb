@@ -11,7 +11,7 @@
 
 <div>
   <% if @meals.blank?%>
-  <div id="does_not_exist">
+  <div class="empty_page">
         <h1>Sorry that meal does not exist right now :(, try searching for something else or go to <%=link_to("our meals", meals_path)%></h1>
   </div>
   <%else%>

@@ -495,4 +495,8 @@ footer {
     background: white;
     color: #777; }
 
+.empty_page {
+  text-align: center;
+  padding: 200px 0px; }
+
 /*# sourceMappingURL=custom.css.map */

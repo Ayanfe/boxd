@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     resource :cart, only: [:show]
     resources :order_items, only: [:create, :update, :destroy]
 
-    devise_for :users, :controllers => {registrations: 'registrations', sessions: 'sessions',confirmations: 'confirmations'}
-
+    devise_for :users, :controllers => {registrations: 'registrations',confirmations: 'confirmations'}
     devise_for :admins
+
 
   root 'static_pages#index'
 
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'static_pages#dashboard'
 
+  get '/delete_account', to: 'static_pages#delete_account'
   # => meals
   get '/meals', to: 'meals#index'
   get '/meals/new', to: 'meals#new'

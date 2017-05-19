@@ -615,3 +615,8 @@ footer{
   .next_page { background: $darkerer-red; color: white; }
   .next_page.disabled { background: white; color: #777; }
 }
+
+.empty_page{
+  text-align: center;
+  padding: 200px 0px;
+}

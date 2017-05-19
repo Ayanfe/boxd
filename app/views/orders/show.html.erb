@@ -1,1 +1,7 @@
-<%=render 'orders/show', order: @orders%>
+<div class="empty_page">
+  <%if @orders.blank?%>
+    <h1>You currently have no orders, go over to <%=link_to("our meals", meals_path)%> and get something to eat.</h1>
+  <%else%>
+    <%=render 'orders/show', order: @orders%>
+  <%end%>
+</div>
