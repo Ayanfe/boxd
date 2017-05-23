@@ -7,22 +7,22 @@
     </li>
     <li>
       <div id="meal_card_bottom">
-            <%= form_for order_item, remote: true do |f| %>
+        <%= form_for order_item, remote: true do |f| %>
 
-            <h4><%= meal.name %></h4>
-            <h4 class="text-right">Price:<%= number_to_currency( meal.price, unit: "N") %></h4>
-            <%if user_signed_in?%>
-              <div >
-                <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
-                <div>
-                  <%= f.hidden_field :meal_id, value: meal.id %>
-                  <%= f.submit "Box"%>
-                </div>
-              </div>
-              <%else%>
-              <%= link_to "Sign in to purchase", new_user_session_path, id: "sign_in_store"%>
-            <%end%>
-            <% end %>
+        <h4><%= meal.name %></h4>
+        <h4 class="text-right">Price:<%= number_to_currency( meal.price, unit: "N") %></h4>
+        <%if user_signed_in?%>
+        <div >
+          <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+          <div>
+            <%= f.hidden_field :meal_id, value: meal.id %>
+            <%= f.submit "Box"%>
+          </div>
+        </div>
+        <%else%>
+        <%= link_to "Sign in to purchase", new_user_session_path, id: "sign_in_store"%>
+        <%end%>
+        <% end %>
       </div>
     </li>
   </ul>

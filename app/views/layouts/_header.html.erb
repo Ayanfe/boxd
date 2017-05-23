@@ -6,7 +6,7 @@
       <% if user_signed_in?%>
       <li class="drop_down" id="user_header">
 
-          <%="Hello," + " "+current_user.first_name.capitalize + "." +current_user.last_name[0].capitalize%>
+        <%="Hello," + " "+current_user.first_name.capitalize + "." +current_user.last_name[0].capitalize%>
 
         <ul class="sub-menu" id="user_sub_menu">
           <li><%= render 'layouts/cart_text'%></li>
@@ -17,7 +17,7 @@
       <% elsif admin_signed_in?%>
       <li class="drop_down" id="user_header">
 
-          <%=current_admin.email%>
+        <%=current_admin.email%>
 
         <ul class="sub-menu" id="user_sub_menu">
           <li><%=link_to "Dashboard", dashboard_path%></li>
@@ -30,7 +30,7 @@
       <li class="links_header header_links"><%=link_to 'about boxd', about_path%></li>
       <li class="links_header header_links"><%=link_to 'how it works', how_it_works_path%></li>
       <li class="drop_down" id="meals_menu">
-      <p>our meals</p>
+        <p>our meals</p>
         <ul class="sub-menu" id="meals_sub_menu">
           <li><%=link_to 'Our meals', meals_path%></li>
           <li><%=link_to 'Our plans', our_plans_path%></li>

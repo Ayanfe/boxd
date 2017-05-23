@@ -1,4 +1,3 @@
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
 <div id="login_form_holder">
@@ -17,23 +16,21 @@
   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="field" id="remember_me">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
+  <div class="field" id="remember_me">
+    <%= f.check_box :remember_me %>
+    <%= f.label :remember_me %>
+  </div>
   <% end -%>
 
   <% if devise_mapping.recoverable? -%>
-    <div class="field" id="forgot_password">
-      <%= link_to "Forgot your password?", new_password_path(resource_name) %>
-    </div>
+  <div class="field" id="forgot_password">
+    <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+  </div>
   <% end -%>
 
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
-
-
 
   <div id="signup_shared">
     <h2>OR</h2>

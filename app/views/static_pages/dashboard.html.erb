@@ -1,10 +1,10 @@
 <%if user_signed_in?%>
-  <%provide(:title,current_user.first_name + " " + current_user.last_name)%>
-  <%=link_to "My Orders", orders_path%>
-  <%=link_to "Edit my details", edit_user_registration_path%>
-  <%= link_to "Reset my password", new_user_password_path %>
-  <%= link_to("Delete my account", delete_account_path)%>
+<%provide(:title,current_user.first_name + " " + current_user.last_name)%>
+<%=link_to "My Orders", orders_path%>
+<%=link_to "Edit my details", edit_user_registration_path%>
+<%= link_to "Reset my password", new_user_password_path %>
+<%= link_to("Delete my account", delete_account_path)%>
 <%elsif admin_signed_in?%>
-  <%provide(:title, current_admin.first_name + " " + current_admin.last_name)%>
-  <%=link_to "Orders", orders_path%>
+<%provide(:title, current_admin.first_name + " " + current_admin.last_name)%>
+<%=link_to "Orders", orders_path%>
 <%end%>
