@@ -1,413 +1,384 @@
 @import "variables.scss";
 
-    *{
-      border:0px;
-      margin: 0px;
-      font-family: $courier;
-    }
-
+* {
+  border: 0;
+  margin: 0;
+  font-family: $courier;
+}
 /*notices*/
-#notice{
+#notice {
   width: 400px;
   margin: auto;
   display: block;
   text-align: center;
-
 }
-    /*header*/
- header{
-      width: 100%;
+/*header*/
+header {
+  width: 100%;
 
-      #user_header{
+  #user_header {}
 
-      }
-      #meals_menu{
-
-        #meals_sub_menu{
-          width: 140px;
-          margin-left: -20px;
-          width:150px;
-        }
-
-      }
-      .clearfix:after {
-        content: "";
-        display: table;
-      }
-      .sub-menu{
-        display: none;
-        position: absolute;
-        background-color: $yellow;
-        z-index: 1;
-        text-align: center;
-        padding: 10px 20px;
-        border: 1px solid $light-grey;
-        border-radius: 4px;
-        color: white;
-        margin-left: -50px;
-        font-size: 1em;
-        margin-top: 7px;
-        text-transform: uppercase;
-
-          li{
-            list-style-type: none;
-            margin: 30px 0px;
-          }
-      }
-
-      #user_sub_menu {
-          width: 350px;
-      }
-}
-      nav{
-        position: relative;
-        display: inline-block;
-        #nav_logo{
-          margin-top: 30px;
-          text-align: center;
-          height: 40px;
-          display: block;
-        }
-
-        ul{
-          margin: 40px 0;
-          .drop_down{
-            margin: 40px 80px 50px 70px;
-            float: right;
-            list-style-type: none;
-            letter-spacing: 5px;
-            display: inline;
-            padding: 0;
-            line-height: 0px;
-            margin-top: 65px;
-            color: grey;
-            a{
-              text-decoration: none;
-              color: white;
-            }
-            &:hover>ul{
-              display: block;
-            }
-            &:after{
-              content: "\25BC"; /*escaped unicode for the down arrow*/
-                  font-size: .5em;
-                  display: inline;
-                  position: relative;
-                  bottom:1px;
-            }
-            p{
-              display: inline-block;
-              text-transform: uppercase;
-            }
-          }
-            li.links_header{
-              // margin: 40px 30px 0 10px;
-              margin: 40px 100px 0 10px;
-              float: right;
-              list-style-type: none;
-              line-height: 50px;
-              display: inline;
-              letter-spacing: 7px;
-
-              a{
-                text-transform: uppercase;
-                text-decoration: none;
-                color: grey;
-              }
-            }
-            #login_button{
-              border: 1px solid $darkerer-red;
-              padding: 10px 80px;
-              color: $darkerer-red;
-              margin-left: 40px;
-              letter-spacing: 20px;
-              transition: .5s;
-
-              &:hover{
-                color: white;
-                background-color: $darkerer-red;
-              }
-            }
-          }
-
-        }
-
-
-    /*index page*/
-
-    #home_banner,#home_banner2{
-      width: 100%;
-
+  #meals_menu {
+    #meals_sub_menu {
+      width: 140px;
+      margin-left: -20px;
+      width: 150px;
     }
-    #banner_home{
+  }
 
-    }
-    #banner_home2{
+  .clearfix:after {
+    content: "";
+    display: table;
+  }
 
-      h2{
-        text-transform: uppercase;
-        color: white;
-        margin-left: 100px;
-
-        font-size: 4.0em;
-        height: 30px;
-        width: 100px;
-
-      }
-    }
-    #our_plans_banner{
-      color: white;
-      padding:20px 50px;
-      background-color:$light-red;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-    #our_meals_banner2{
-      background-color: $darkerer-red;
-      color: white;
-      padding:20px 100px;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-
-    #our_plans_button,#our_meals_button2{
-      text-align: center;
-      margin: -7% 0 100px 0;
-    }
-
-
-    #how_heading{
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 1.9em;
-      font-family: sans-serif;
-    }
-    #how_descriptions{
-      margin-top: 50px;
-      width: 100%;
-      height: 300px;
-
-      .how_descriptions{
-        text-transform: uppercase;
-        float: right;
-        text-align: center;
-        margin: 100px 260px 60px 0;
-        color: $dark-grey;
-        font-stretch: extra-expanded;
-        font-size: 1.4em;
-
-        h3{
-          margin-top: 50px;
-        }
-      }
-    }
-    #button_more{
-      text-align: center;
-      margin: 80px 0;
-      #more_button{
-
-        text-decoration: none;
-        text-transform: uppercase;
-        color: white;
-        border: 1px solid $darkened-green;
-        background-color: $darkened-green;
-        padding: 20px 70px;
-        font-size: $button-font-size;
-      }
-
-    }
-
-    /*how it works*/
-    #how_banner{
-      @include box-sizing;
-      width: 100%;
-      h1,h2{
-
-        text-transform: uppercase;
-      }
-      h1{
-        font-size: 5em;
-        margin: 0 0 0 300px;
-      }
-      h2{
-        font-size: 4em;
-        float: right;
-        margin: 0 0px 0 0;
-      }
-    }
-
-
-
-    .how_sections{
-      width: 100%;
-      padding: 60px 300px;
-      @include box-sizing;
-      display: inline-block;
-      //border-bottom: 1px solid $dark-grey;
-
-
-      h1{
-        text-transform: uppercase;
-        color: $dark-grey;
-        text-align: center;
-        letter-spacing: 4px;
-      }
-      .open_box, .closed_box{
-
-          width: 200px;
-
-      }
-      .closed_box{
-        margin: 50px 0 0 100px;
-      }
-      p{
-        display: inline-block;
-        width: 100%;
-        font-size: 1.3em;
-        text-align: center;
-        margin-top: 30px;
-        letter-spacing: 3px;
-      }
-
-      #how_can_I_help{
-        width: 300px;
-      }
-      .right_side{
-        float: right;
-        width: 50%;
-      }
-      .left_side{
-        float: left;
-        width: 30%;
-        border-right: 1px solid $light-grey;
-        padding: 10px 80px 0 0;
-      }
-    }
-
-/*About page*/
-#about_holder{
-   margin: 80px 0px 150px 0px;
-  h1{
+  .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: $yellow;
+    z-index: 1;
     text-align: center;
-    font-size: 3.5em;
-    margin: 60px 0px;
+    padding: 10px 20px;
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    color: white;
+    margin-left: -50px;
+    font-size: 1em;
+    margin-top: 7px;
+    text-transform: uppercase;
+
+    li {
+      list-style-type: none;
+      margin: 30px 0;
+    }
+  }
+
+  #user_sub_menu {
+    width: 350px;
+  }
+}
+
+nav {
+  position: relative;
+  display: inline-block;
+
+  #nav_logo {
+    margin-top: 30px;
+    text-align: center;
+    height: 40px;
+    display: block;
+  }
+
+  ul {
+    margin: 40px 0;
+
+    .drop_down {
+      margin: 40px 80px 50px 70px;
+      float: right;
+      list-style-type: none;
+      letter-spacing: 5px;
+      display: inline;
+      padding: 0;
+      line-height: 0;
+      margin-top: 65px;
+      color: grey;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      &:hover > ul {
+        display: block;
+      }
+
+      &:after {
+        content: "\25BC";
+        /*escaped unicode for the down arrow*/
+        font-size: 0.5em;
+        display: inline;
+        position: relative;
+        bottom: 1px;
+      }
+
+      p {
+        display: inline-block;
+        text-transform: uppercase;
+      }
+    }
+
+    li.links_header {
+      // margin: 40px 30px 0 10px;
+      margin: 40px 100px 0 10px;
+      float: right;
+      list-style-type: none;
+      line-height: 50px;
+      display: inline;
+      letter-spacing: 7px;
+
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: grey;
+      }
+    }
+
+    #login_button {
+      border: 1px solid $darkerer-red;
+      padding: 10px 80px;
+      color: $darkerer-red;
+      margin-left: 40px;
+      letter-spacing: 20px;
+      transition: 0.5s;
+
+      &:hover {
+        color: white;
+        background-color: $darkerer-red;
+      }
+    }
+  }
+}
+/*index page*/
+#home_banner,
+#home_banner2 {
+  width: 100%;
+}
+
+#banner_home {}
+
+#banner_home2 {
+  h2 {
+    text-transform: uppercase;
+    color: white;
+    margin-left: 100px;
+    font-size: 4.0em;
+    height: 30px;
+    width: 100px;
+  }
+}
+
+#our_plans_banner {
+  color: white;
+  padding: 20px 50px;
+  background-color: $light-red;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#our_meals_banner2 {
+  background-color: $darkerer-red;
+  color: white;
+  padding: 20px 100px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#our_meals_button2,
+#our_plans_button {
+  text-align: center;
+  margin: -7% 0 100px;
+}
+
+#how_heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.9em;
+  font-family: sans-serif;
+}
+
+#how_descriptions {
+  margin-top: 50px;
+  width: 100%;
+  height: 300px;
+
+  .how_descriptions {
+    text-transform: uppercase;
+    float: right;
+    text-align: center;
+    margin: 100px 260px 60px 0;
+    color: $dark-grey;
+    font-stretch: extra-expanded;
+    font-size: 1.4em;
+
+    h3 {
+      margin-top: 50px;
+    }
+  }
+}
+
+#button_more {
+  text-align: center;
+  margin: 80px 0;
+
+  #more_button {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid $darkened-green;
+    background-color: $darkened-green;
+    padding: 20px 70px;
+    font-size: $button-font-size;
+  }
+}
+/*how it works*/
+#how_banner {
+  @include box-sizing;
+  width: 100%;
+
+  h1,
+  h2 {
     text-transform: uppercase;
   }
 
-  .about_section{
+  h1 {
+    font-size: 5em;
+    margin: 0 0 0 300px;
+  }
+
+  h2 {
+    font-size: 4em;
+    float: right;
+    margin: 0;
+  }
+}
+
+.how_sections {
+  width: 100%;
+  padding: 60px 300px;
+  @include box-sizing;
+  display: inline-block;
+  //border-bottom: 1px solid $dark-grey;
+  h1 {
+    text-transform: uppercase;
+    color: $dark-grey;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+
+  .closed_box,
+  .open_box {
+    width: 200px;
+  }
+
+  .closed_box {
+    margin: 50px 0 0 100px;
+  }
+
+  p {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 3px;
+  }
+
+  #how_can_I_help {
+    width: 300px;
+  }
+
+  .right_side {
+    float: right;
+    width: 50%;
+  }
+
+  .left_side {
+    float: left;
+    width: 30%;
+    border-right: 1px solid $light-grey;
+    padding: 10px 80px 0 0;
+  }
+}
+/*About page*/
+#about_holder {
+  margin: 80px 0 150px;
+
+  h1 {
+    text-align: center;
+    font-size: 3.5em;
+    margin: 60px 0;
+    text-transform: uppercase;
+  }
+
+  .about_section {
     margin: 40px auto;
     width: 70%;
     text-align: center;
 
-    h2{
+    h2 {
       font-size: 2em;
       text-transform: uppercase;
     }
 
-    h3{
+    h3 {
       margin-top: 20px;
-      font-size:1.3em;
+      font-size: 1.3em;
     }
   }
 }
-
-
-
 /*Sign up*/
-  .new_user_form{
-    width: 800px;
-    margin: auto;
-    display: block;
-    h2{
-      margin: 30px 0;
-      text-align: center;
-      text-transform: uppercase;
-    }
-    #first_name,#password{
-      float: left;
-    }
-    #last_name,#password_confirmation{
-      margin-left: 3.4%;
-      float: right;
-      display: inline-block;
-    }
-    .field{
-      .top,.bottom{
-        width: 48%;
-      }
-      input{
-        display: block;
-        @include box-sizing;
-        width: 100%;
-        height: 80px;
-        border: 1px solid $light-red;
-        border-radius: 5px;
-        padding: 20px 30px;
-        margin: 50px 0 30px 0;
-        font-size: 1.3em;
-      }
-
-    }
-    .actions{
-      margin-top: 30px;
-
-      input[type=submit]{
-        width: 100%;
-        margin-top: 20px;
-        height: 100px;
-        border:1px solid $light-red;
-        border-radius: 5px;
-        background-color: $darkerer-red;
-        font-size: $button-font-size;
-        text-transform: uppercase;
-        color: white;
-      }
-      }
-
-      #login_shared{
-        display: block;
-        margin-bottom: 30px;
-
-        a{
-          border: 1px solid $light-red;
-          background-color: $darkerer-red;
-          font-size: $button-font-size;
-          text-transform: uppercase;
-          text-align: center;
-          color: white;
-          text-decoration: none;
-          padding: 30px 0px;
-          border-radius: 5px;
-        }
-    }
-
-
-  }
-  #sign_up_error{
-    margin: 50px auto;
-    ul{
-      text-align: center;
-      li{
-            list-style-type: none;
-      }
-    }
-  }
-
-
-/*Log in*/
-#login_form_holder{
+.new_user_form {
   width: 800px;
   margin: auto;
   display: block;
-  #signup_shared{
-    margin: 20px 0;
-    h2{
-      margin: 30px 0;
-      text-transform: uppercase;
+
+  h2 {
+    margin: 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #first_name,
+  #password {
+    float: left;
+  }
+
+  #last_name,
+  #password_confirmation {
+    margin-left: 3.4%;
+    float: right;
+    display: inline-block;
+  }
+
+  .field {
+    .bottom,
+    .top {
+      width: 48%;
     }
 
+    input {
+      display: block;
+      @include box-sizing;
+      width: 100%;
+      height: 80px;
+      border: 1px solid $light-red;
+      border-radius: 5px;
+      padding: 20px 30px;
+      margin: 50px 0 30px;
+      font-size: 1.3em;
+    }
+  }
+
+  .actions {
+    margin-top: 30px;
+
+    input[type=submit] {
+      width: 100%;
+      margin-top: 20px;
+      height: 100px;
+      border: 1px solid $light-red;
+      border-radius: 5px;
+      background-color: $darkerer-red;
+      font-size: $button-font-size;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  #login_shared {
     display: block;
-    a{
+    margin-bottom: 30px;
+
+    a {
       border: 1px solid $light-red;
       background-color: $darkerer-red;
       font-size: $button-font-size;
@@ -415,88 +386,134 @@
       text-align: center;
       color: white;
       text-decoration: none;
-      padding: 30px 0px;
+      padding: 30px 0;
       border-radius: 5px;
     }
   }
-  h2{
+}
+
+#sign_up_error {
+  margin: 50px auto;
+
+  ul {
+    text-align: center;
+
+    li {
+      list-style-type: none;
+    }
+  }
+}
+/*Log in*/
+#login_form_holder {
+  width: 800px;
+  margin: auto;
+  display: block;
+
+  #signup_shared {
+    margin: 20px 0;
+
+    h2 {
+      margin: 30px 0;
+      text-transform: uppercase;
+    }
+    display: block;
+
+    a {
+      border: 1px solid $light-red;
+      background-color: $darkerer-red;
+      font-size: $button-font-size;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      padding: 30px 0;
+      border-radius: 5px;
+    }
+  }
+
+  h2 {
     text-align: center;
     text-transform: uppercase;
   }
-  .field{
-    .top,.bottom{
+
+  .field {
+    .bottom,
+    .top {
       width: 48%;
     }
-    input[type=email], input[type=password]{
+
+    input[type=email],
+    input[type=password] {
       display: block;
       @include box-sizing;
       width: 100%;
-      height:$input-height;
+      height: $input-height;
       border: 1px solid $light-red;
       border-radius: 5px;
       padding: $input-padding;
-      margin: 50px 0 30px 0;
+      margin: 50px 0 30px;
       font-size: 1.3em;
       text-transform: capitalize;
     }
-
   }
-  .actions{
+
+  .actions {
     margin-top: 30px;
 
-    input[type=submit]{
+    input[type=submit] {
       width: 100%;
       margin-top: 20px;
       height: 100px;
-      border:1px solid $light-red;
+      border: 1px solid $light-red;
       border-radius: 5px;
       background-color: $darkerer-red;
       font-size: $button-font-size;
       text-transform: uppercase;
       color: white;
     }
-    #remember_me{
-      input{
+
+    #remember_me {
+      input {
         margin: 0;
         padding: 0;
         width: 0;
       }
     }
+  }
 
-
+  #sign_in_error {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background-color: black;
+  }
 }
-#sign_in_error{
-  display: block;
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  background-color: black;
-}
-}
-
 /*new meals*/
-#new_meal_form_holder{
+#new_meal_form_holder {
   width: 400px;
   margin: auto;
-  input{
+
+  input {
     width: 100%;
     border: 1px solid $light-red;
   }
-  input[type=file]{
+
+  input[type=file] {
     height: 50px;
     height: 50px;
     border: 1px solid $light-red;
   }
 }
-
 /*confirmations page*/
-#confirmation_form_holder{
+#confirmation_form_holder {
   width: 800px;
   margin: auto;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 150px;
-  input{
+
+  input {
     width: 100%;
     height: $input-height;
     padding: $input-padding;
@@ -507,21 +524,21 @@
     font-size: 1.3em;
   }
 
-  input[type=submit]{
+  input[type=submit] {
     background-color: $light-red;
     border: none;
     color: white;
     font-size: $button-font-size;
   }
-
 }
-
 /*Edit account information*/
-#edit_account_form_holder,#forgot_password_form_holder{
+#edit_account_form_holder,
+#forgot_password_form_holder {
   width: 800px;
   margin: auto;
   text-align: center;
-  input{
+
+  input {
     width: 100%;
     height: $input-height;
     padding: $input-padding;
@@ -530,61 +547,63 @@
     border-radius: 5px;
     @include box-sizing;
     margin-top: 50px;
-    }
+  }
 
-    input[type=submit]{
-      margin-bottom: 30px;
-      background-color: $light-red;
-      font-size: $button-font-size;
-      color: white;
-    }
+  input[type=submit] {
+    margin-bottom: 30px;
+    background-color: $light-red;
+    font-size: $button-font-size;
+    color: white;
+  }
 
-    ul{
-      li{
-        list-style-type: none;
-      }
+  ul {
+    li {
+      list-style-type: none;
     }
-    margin-bottom: 150px;
+  }
+  margin-bottom: 150px;
 }
-
-
 /*footer*/
-footer{
-  padding: 70px 0px;
+footer {
+  padding: 70px 0;
   height: 100px;
   width: 100%;
   background-color: $yellow;
   clear: both;
-  #subscribe_boxd{
+
+  #subscribe_boxd {
     display: inline-block;
     width: 300px;
     margin-left: 8%;
-    padding: 20px 20px;
-    input{
+    padding: 20px;
+
+    input {
       text-transform: capitalize;
       font-size: 1.1em;
       background-color: white;
       border: 1px solid $light-red;
       width: 100%;
-      padding: 20px 20px;
+      padding: 20px;
       height: 20px;
     }
   }
-  #links_footer{
+
+  #links_footer {
     color: white;
     text-transform: uppercase;
     margin-top: 20px;
     display: inline-block;
     float: left;
     letter-spacing: 5px;
-    a{
+
+    a {
       text-decoration: none;
       color: white;
       margin-left: 20px;
     }
 
-    h3{
-      display:block;
+    h3 {
+      display: block;
       text-align: center;
       margin-bottom: 30px;
     }
@@ -592,31 +611,52 @@ footer{
     height: 100px;
     margin-left: 30px;
   }
-  #social_media{
+
+  #social_media {
     display: inline-block;
-    margin:30px 50px 0 8%;
+    margin: 30px 50px 0 8%;
     float: right;
-    img{
+
+    img {
       margin-right: 30px;
       float: right;
       width: 60px;
     }
   }
-
 }
 
 .pagination {
   text-align: center;
   margin-bottom: 40px;
   clear: both;
-  .previous_page { background:$darkerer-red; color:white; }
-  .previous_page.disabled { background: white; color: $darkerer-red; }
-  .current { background: $boxd-gold; border: 1px solid $darkerer-red;}
-  .next_page { background: $darkerer-red; color: white; }
-  .next_page.disabled { background: white; color: #777; }
+
+  .previous_page {
+    background: $darkerer-red;
+    color: white;
+  }
+
+  .previous_page.disabled {
+    background: white;
+    color: $darkerer-red;
+  }
+
+  .current {
+    background: $boxd-gold;
+    border: 1px solid $darkerer-red;
+  }
+
+  .next_page {
+    background: $darkerer-red;
+    color: white;
+  }
+
+  .next_page.disabled {
+    background: white;
+    color: #777;
+  }
 }
 
-.empty_page{
+.empty_page {
   text-align: center;
-  padding: 200px 0px;
+  padding: 200px 0;
 }

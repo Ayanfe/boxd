@@ -2,59 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables.scss";
-
 //new meal =>
-
-#new_meal_holder{
+#new_meal_holder {
   width: 800px;
   margin: auto;
 
-
-  ul{
-
-    li{
+  ul {
+    li {
       list-style-type: none;
 
-      input{
+      input {
         margin-top: 20px;
-
-        height:30px;
+        height: 30px;
         text-transform: uppercase;
-
       }
-      input[type="text"],input[type="number"]{
+
+      input[type="number"],
+      input[type="text"] {
         border: 1px solid $light-red;
         border-radius: 5px;
         padding: 10px 20px;
         font-size: 1em;
         width: 100%;
-
       }
-      input[type="submit"]{
+
+      input[type="submit"] {
         font-size: $button-font-size;
         background-color: $darkerer-red;
         border-radius: 5px;
         width: 100%;
         text-align: center;
         height: 100px;
-        padding: 50px 50px;
+        padding: 50px;
         color: white;
       }
     }
-
   }
 }
-
 //meal index = >
-
-.meal_holder{
+.meal_holder {
   width: 100%;
   height: 600px;
   clear: both;
   margin-bottom: 300px;
-  padding: 100px 0px;
+  padding: 100px 0;
 
-  .meal_card{
+  .meal_card {
     display: block;
     float: left;
     width: 300px;
@@ -65,52 +58,54 @@
     text-align: center;
     margin-left: 30px;
 
-    ul{
+    ul {
       display: block;
       width: 100%;
       padding: 0;
-      li{
+
+      li {
         display: block;
         width: 100%;
         list-style-type: none;
       }
     }
-    #meal_card_top{
+
+    #meal_card_top {
       width: 100%;
       height: 240px;
       display: block;
-      img{
+
+      img {
         width: 100%;
         height: 100%;
-        border-radius: 10px 10px 0px 0px;
-
+        border-radius: 10px 10px 0 0;
       }
     }
 
-    #meal_card_bottom{
+    #meal_card_bottom {
       background-color: $light-red;
       width: 100%;
       height: 100px;
-      border-radius: 0px 0px 10px 10px;
-      padding: 20px 0px;
+      border-radius: 0 0 10px 10px;
+      padding: 20px 0;
       color: white;
 
-      a{
+      a {
         text-decoration-color: $boxd-gold;
         color: white;
         text-transform: uppercase;
         font-style: oblique;
-        font-size:1.3em;
+        font-size: 1.3em;
       }
     }
-
   }
 }
 
-#meal_holder{
+#meal_holder {
   width: 800px;
   margin: auto;
-  .meal_card{
+
+  .meal_card {
     display: block;
     float: left;
     width: 800px;
@@ -121,55 +116,55 @@
     text-align: center;
     margin-bottom: 60px;
 
-    ul{
+    ul {
       display: block;
       width: 100%;
       padding: 0;
-      li{
+
+      li {
         display: block;
         width: 100%;
         list-style-type: none;
       }
     }
-    #meal_card_top{
+
+    #meal_card_top {
       width: 100%;
       height: 540px;
       display: block;
-      img{
+
+      img {
         width: 100%;
         height: 100%;
-        border-radius: 10px 10px 0px 0px;
-
+        border-radius: 10px 10px 0 0;
       }
     }
 
-    #meal_card_bottom{
+    #meal_card_bottom {
       background-color: $light-red;
       width: 100%;
       height: 100px;
-      border-radius: 0px 0px 10px 10px;
-      padding: 20px 0px;
+      border-radius: 0 0 10px 10px;
+      padding: 20px 0;
       color: white;
     }
-
   }
-
 }
 
-#search_bar{
+#search_bar {
   width: 800px;
   margin: auto;
-  padding: 50px 0px;
+  padding: 50px 0;
 
-  input[type="text"]{
+  input[type="text"] {
     border: 1px solid $light-red;
     width: 80%;
-    padding:20px 10px;
+    padding: 20px 10px;
     border-radius: 20px;
     font-size: 1.2em;
   }
 
-  input[type="submit"]{
+  input[type="submit"] {
     background-color: $light-red;
     padding: 20px 40px;
     color: white;
