@@ -8,28 +8,24 @@
   </head>
 
   <body>
-    <div id="header">
-      <%= render 'layouts/header'%>
+    <%= render 'layouts/header'%>
+
+    <div id="notice">
+      <% if notice %>
+
+      <p class="notice"><%= notice %></p>
+
+      <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+      <% end %>
     </div>
-
-<div id="notice">
-    <% if notice %>
-
-<p class="notice"><%= notice %></p>
-
-
-  <% elsif alert %>
-   <p class="alert"><%= alert %></p>
-  <% end %>
-</div>
     <div class="page_content">
 
       <%= yield %>
 
-    <%=render 'layouts/footer'%>
+      <%=render 'layouts/footer'%>
 
     </div>
-
 
   </body>
 </html>
