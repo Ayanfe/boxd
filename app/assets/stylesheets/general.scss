@@ -21,11 +21,23 @@ a {
     text-transform: uppercase;
     border: 1px solid black;
     padding: 1em;
+    display: inline-block;
+    line-height: normal;
 
     &:hover {
       background-color: #932230;
       color: white;
       border-color: #932230;
+    }
+
+    &.white {
+      border-color: white;
+
+      &:hover {
+        color: black;
+        background-color: white;
+        border-color: white;
+      }
     }
   }
 }

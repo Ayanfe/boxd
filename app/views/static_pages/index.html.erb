@@ -1,12 +1,13 @@
-<div id='banner_home'>
-  <%= image_tag(4, alt:"Home Banner", id:'home_banner')%>
-  <div id="our_plans_button">
-    <%= link_to 'our plans', our_plans_path, id:'our_plans_banner'%>
+<div class='banner' style="background-image: url(<%= image_path('topbanner') %>)">
+  <div id="content">
+    <h2 id="main">Don't want to go to the market?<br>Let's do it for you.</h2>
+    <p class="sub">Leave the hassle of grocery shopping behing and let us tend to your needs.</p>
+    <%= link_to 'our plans', our_plans_path, class:'button white'%>
   </div>
 </div>
 
 <div>
-    <h1 id="how_heading">how it works</h1>
+  <h1 id="how_heading">how it works</h1>
 </div>
 
 <div id="how_descriptions">
@@ -28,12 +29,10 @@
     <h3>you crave</h3>
   </div>
 
-
 </div>
 <div id="button_more">
   <%= link_to "more", how_it_works_path, id:"more_button"%>
 </div>
-
 
 <div id='banner_home2'>
   <%= image_tag(2, alt:"Home Banner", id:'home_banner2')%>
