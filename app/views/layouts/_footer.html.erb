@@ -1,15 +1,8 @@
-<footer>
-  <div id="links_footer">
-    <h3><%=link_to "boxd", index_path%></h3>
-    <%=link_to "about boxd", about_path, id: "about_footer"%>
-    <%=link_to "how it works", how_it_works_path, id: "how_footer"%>
-    <%=link_to "our plans", our_plans_path, id: "how_footer"%>
-  </div>
-
+<div id="footer">
+  <%=link_to 'boxD', root_path, :id => "logo"%>
   <div id="social_media">
-    <%= link_to image_tag(16,alt:"boxd",id:"twitter_boxd"),'#'%>
-    <%= link_to image_tag(15,alt:"boxd",id:"facebook_boxd"),'#'%>
-    <%= link_to image_tag(17,alt:"boxd",id:"instagram_boxd"),'#'%>
+    <%=link_to image_tag( 15, alt:"boxd", id:"facebook_boxd"), '#' %>
+    <%=link_to image_tag( 17, alt:"boxd", id:"twitter_boxd"), '#' %>
+    <%=link_to image_tag( 16, alt:"boxd", id:"instagram_boxd"), '#' %>
   </div>
-
-</footer>
+</div>
