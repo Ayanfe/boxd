@@ -52,7 +52,9 @@ Rails.application.routes.draw do
 
   delete '/order_item/:id', to: 'cart#destroy'
 
-  get '/checkout', to: 'orders#checkout'
+  get '/payment', to: 'orders#payment'
+
+  post '/checkout', to: 'orders#checkout'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
