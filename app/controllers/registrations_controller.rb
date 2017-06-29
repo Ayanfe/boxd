@@ -1,12 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-
-
-  def create
-    if deleted_at
-      resource.reactivate_user
-    end
-  end
-
+ 
   def destroy
     resource.soft_delete
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
