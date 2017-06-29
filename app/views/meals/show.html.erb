@@ -24,14 +24,11 @@
 
   <div id="add_to_cart_ms">
     <% if user_signed_in?%>
-      <%= form_for @order_item, remote: true, url:{ action:"create", controller: "order_items"} do |f| %>
-      <%= f.number_field :quantity, value:1, min: 1%>
-        <div>
-          <%= f.hidden_field :price, value: @meal.price %>
-          <%= f.hidden_field :meal_id, value: @meal.id %>
-          <%= f.submit "Add to Cart"%>
-        </div>
-      <%end%>
+    <%= form_for @order_item, remote: true do |f| %>
+      <%=f.hidden_field :quantity%>
+      <%=f.hidden_field :meal_id => '@meal.id'%>
+      <%= f.submit 'add to cart'%>
+    <%end%>
     <% end %>
   </div>
 

@@ -46,7 +46,7 @@ Rails.application.routes.draw do
 
   get '/cart', to: 'carts#create'
 
-  patch '/order_items', to: 'order_items#create'
+  post '/order_items/:id', to: 'order_items#create'
 
   patch '/order_item/:id', to: 'cart#update'
 
