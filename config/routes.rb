@@ -46,13 +46,15 @@ Rails.application.routes.draw do
 
   get '/cart', to: 'carts#create'
 
-  patch '/order_items', to: 'order_items#create'
+  post '/order_items/:id', to: 'order_items#create'
 
   patch '/order_item/:id', to: 'cart#update'
 
   delete '/order_item/:id', to: 'cart#destroy'
 
-  get '/checkout', to: 'orders#checkout'
+  get '/payment', to: 'orders#payment'
+
+  post '/checkout', to: 'orders#checkout'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

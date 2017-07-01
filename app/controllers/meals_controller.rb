@@ -23,7 +23,6 @@ class MealsController < ApplicationController
     @meal.order_items.each do |oi|
       @order_item = oi
     end
-
   end
 
 

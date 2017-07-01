@@ -29,6 +29,10 @@ class OrdersController < ApplicationController
       @order.save
     end
 
+    def payment
+      render 'carts/payment'
+    end
+
   def delivered
     @order = Order.find(params[:order][:order_id])
     @order.delivered!
