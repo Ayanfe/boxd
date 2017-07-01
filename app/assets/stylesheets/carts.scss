@@ -1,15 +1,14 @@
 // Place all the styles related to the Carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-  @import "variables.scss";
+@import "variables.scss";
 
-#cart_holder{
+#cart_holder {
   width: 1000px;
   margin: auto;
-  padding: 50px 0px;
+  padding: 50px 0;
 
-
-  .shopping_cart{
+  .shopping_cart {
     box-shadow: $box-shadow;
     width: 60%;
     display: block;
@@ -19,101 +18,104 @@
     margin-bottom: 30px;
   }
 
-  .empty_shopping_cart{
+  .empty_shopping_cart {
     width: 100%;
-    padding: 150px 0px;
+    padding: 150px 0;
   }
 
-    #cart_row{
+  #cart_row {
+    width: 100%;
+    clear: both;
+    display: grid;
+    box-sizing: border-box;
+    border-bottom: 1px solid $darkerer-red;
+    padding: 20px 0;
+
+    ul {
       width: 100%;
-      clear: both;
-      display: grid;
-      box-sizing: border-box;
-      border-bottom: 1px solid $darkerer-red;
-      padding: 20px 0px;
-      ul {
-        width: 100%;
+      display: block;
+
+      li {
         display: block;
-        li{
-          display: block;
-          width: 100%;
-          height: 100%;
-          list-style-type: none;
+        width: 100%;
+        height: 100%;
+        list-style-type: none;
+      }
 
+      #cart_item_info {
+        display: block;
+        width: 80%;
+        float: left;
+        margin-bottom: 50px;
+
+        input[type="submit"] {
+          background-color: $darkerer-red;
+          color: white;
+          padding: 10px 20px;
         }
 
-        #cart_item_info{
-          display: block;
+        .form-control {
+          border: 1px solid $darkerer-red;
+        }
+
+        img {
+          width: 250px;
+          height: 200px;
+        }
+
+        #cart_ingredients {
+          margin-top: 40px;
+          color: $boxd-gold;
+          background-color: white;
+          box-shadow: $box-shadow;
           width: 80%;
-          float: left;
-          margin-bottom: 50px;
+          height: 50px;
+          padding: 20px;
+          text-transform: uppercase;
 
-          input[type="submit"]{
-            background-color: $darkerer-red;
-            color: white;
-            padding: 10px 20px;
-          }
-          .form-control{
-            border: 1px solid $darkerer-red;
-          }
-          img{
-            width: 250px;
-            height: 200px;
+          hr {
+            width: 10px;
+            height: 10px;
           }
 
-          #cart_ingredients{
-            margin-top: 40px;
-            color: $boxd-gold;
-            background-color:white;
-            box-shadow: $box-shadow;
-            width: 80%;
-            height: 50px;
-            padding: 20px 20px;
-            text-transform: uppercase;
-
-            hr{
-              width: 10px;
-              height: 10px;
-            }
-            span{
-              font-size: 1.3em;
-            }
+          span {
+            font-size: 1.3em;
           }
         }
+      }
 
-        #cart_item_aside{
-          display: block;
-          float: right;
-          color: $darkerer-red;
-          width: 20%;
-          img{
-            width:30px;
+      #cart_item_aside {
+        display: block;
+        float: right;
+        color: $darkerer-red;
+        width: 20%;
 
-          }          }
+        img {
+          width: 30px;
         }
       }
     }
-
-
-  #checkout_aside{
-    width: 20%;
-    text-align: center;
-    display: block;
-    float: right;
-    border: 1px solid $darkerer-red;
-    padding: 10px 0px;
-    margin-right: 100px;
-
-    #checkout_button{
-      margin-top: 30px;
-
-    }
-
-    a{
-      text-decoration: none;
-      border: 1px solid $darkerer-red;
-      padding: 10px 105px;
-        background-color: $darkerer-red;
-        color: white;
-    }
   }
+}
+
+#checkout_aside {
+  width: 20%;
+  text-align: center;
+  display: block;
+  float: right;
+  border: 1px solid $darkerer-red;
+  padding: 10px 0;
+  margin-right: 100px;
+
+  #checkout_button {
+    margin-top: 30px;
+  }
+
+  a {
+    text-decoration: none;
+    border: 1px solid $darkerer-red;
+    padding: 10px 105px;
+    background-color: $darkerer-red;
+    color: white;
+  }
+}

@@ -1,41 +1,64 @@
-<div id='banner_home'>
-  <%= image_tag(4, alt:"Home Banner", id:'home_banner')%>
-  <div id="our_plans_button">
-    <%= link_to 'our plans', our_plans_path, id:'our_plans_banner'%>
+<div class='banner center tall' style="background-image: url(<%= image_path('food1') %>)">
+  <div id="content">
+    <h2 id="main">Don't want to go to the market?<br>Let's do it for you.</h2>
+    <p class="sub">Leave the hassle of grocery shopping behing and let us tend to your needs.</p>
+    <%= link_to 'our plans', our_plans_path, class:'button white'%>
   </div>
 </div>
 
-<div>
-    <h1 id="how_heading">how it works</h1>
+<div id="index_how">
+  <h2 id="title">How it Works</h2>
+  <div class="row">
+    <%= image_tag 'vvv', alt:'You crave'%>
+    <div id="content">
+      <div id="content_wrapper">
+        <h2 id="title">You crave</h2>
+        <p id="details">Craving is what you do all day long. We don't care, we don't give a s***. Shut up and give us all your money.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <%= image_tag 'vvv', alt:'We box'%>
+    <div id="content">
+      <div id="content_wrapper">
+        <h2 id="title">We box</h2>
+        <p id="details">A whole bunch of nonsense about boxing. I mean what's the point of this even. What's so special about boxes.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <%= image_tag 'vvv', alt:'We deliver'%>
+    <div id="content">
+      <div id="content_wrapper">
+        <h2 id="title">We deliver</h2>
+        <p id="details">Yeah right. Deliver for s***. We don't even care enough to wipe our asses for you. Why would we come to your house?</p>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="cards">
+    <div class="card">
+      <%=# image_tag('vvv', alt:'You crave')
+      %>
+      <h5>You Crave</h5>
+    </div>
+    <div class="card">
+      <%=# image_tag('vvv', alt:'We box')
+      %>
+      <h5>We box</h5>
+    </div>
+    <div class="card">
+      <%=# image_tag('vvv', alt:'We deliver')
+      %>
+      <h5>We deliver</h5>
+    </div>
+  </div> -->
+  <%= link_to "more", how_it_works_path, class:"button"%>
 </div>
 
-<div id="how_descriptions">
-  <div class="how_descriptions">
-    <%= image_tag('#', alt:'We deliver')%>
-    <h3>we deliver</h3>
+<div class='banner center' style="background-image: url(<%= image_path('food2') %>)">
+  <div id="content">
+    <h2 id="main">Looking for the perfect meal?<br>We've got it.</h2>
+    <p class="sub">From traditional to foreign, we've got everything you crave, and more.</p>
+    <%= link_to 'our meals', meals_path, class:'button white'%>
   </div>
-
-  <div class="how_descriptions">
-    <%= image_tag('#', alt:'We box')%>
-    <h3>we box</h3>
-  </div>
-
-  <div class="how_descriptions">
-    <%= image_tag('#', alt:'You crave')%>
-    <h3>you crave</h3>
-  </div>
-
-
-</div>
-<div id="button_more">
-  <%= link_to "more", how_it_works_path, id:"more_button"%>
-</div>
-
-
-<div id='banner_home2'>
-  <%= image_tag(2, alt:"Home Banner", id:'home_banner2')%>
-  <div id="our_meals_button2">
-    <%= link_to 'our meals', meals_path, id:'our_meals_banner2'%>
-  </div>
-
 </div>

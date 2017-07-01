@@ -1,28 +1,29 @@
 <div id="edit_product_form">
   <%= form_for @meal, html: {multipart: true} do |f|  %>
-      <% if @meal.errors.any? %>
-     <div id="error_explanation">
-       <h2><%= pluralize(@meal.errors.count, "error") %> prohibited this meal from being updated:</h2>
-
-       <ul>
-       <% @meal.errors.full_messages.each do |message| %>
-         <li><%= message %></li>
-       <% end %>
-       </ul>
-     </div>
-    <% end %>
+  <% if @meal.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@meal.errors.count, "error") %>
+      prohibited this meal from being updated:</h2>
 
     <ul>
-      <% if f.object.image? %>
-      <%= image_tag f.object.image.store.url %>
-      <%= f.label :remove_image %>
-      <%= f.check_box :remove_image %>
-    <% end %>
-      <li><%= f.file_field :image, placeholder: "Image" %></li>
-      <li><%= f.text_field :name, placeholder: "Name" %></li>
-      <li><%= f.number_field :price, placeholder: "Price"%></li>
-      <li><%= f.check_box :active%></li>
-      <li><%= f.submit "Done" %></li>
+      <% @meal.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
     </ul>
+  </div>
+  <% end %>
+
+  <ul>
+    <% if f.object.image? %>
+    <%= image_tag f.object.image.store.url %>
+    <%= f.label :remove_image %>
+    <%= f.check_box :remove_image %>
+    <% end %>
+    <li><%= f.file_field :image, placeholder: "Image" %></li>
+    <li><%= f.text_field :name, placeholder: "Name" %></li>
+    <li><%= f.number_field :price, placeholder: "Price"%></li>
+    <li><%= f.check_box :active%></li>
+    <li><%= f.submit "Done" %></li>
+  </ul>
   <%end%>
 </div>

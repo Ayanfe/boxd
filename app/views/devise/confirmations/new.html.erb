@@ -1,10 +1,8 @@
-
-
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
 
 <div id="confirmation_form_holder">
   <h2>Resend confirmation instructions</h2>
-  
+
   <%= devise_error_messages! %>
 
   <div class="field">

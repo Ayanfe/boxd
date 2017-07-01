@@ -1,30 +1,32 @@
 <div id="cart_holder">
   <% if !@order_item.nil? && @order_item.errors.any? %>
-    <div class="alert alert-danger">
-      <ul>
+  <div class="alert alert-danger">
+    <ul>
       <% @order_item.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+      <li><%= msg %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
   <% if @order_items.size == 0 %>
   <div class="empty_shopping_cart">
     <p class="text-center">
-      There are no items in your shopping cart.  Please go head to <%= link_to "our meals", meals_path %> and add some items to your cart.
+      There are no items in your shopping cart. Please go head to
+      <%= link_to "our meals", meals_path %>
+      and add some items to your cart.
     </p>
   </div>
-  <% else %>
-     <div class="shopping_cart">
-        <% @order_items.each do |order_item| %>
-        <%= render 'carts/cart_row', meal: order_item.meal, order_item: order_item, show_total: true %>
-        <% end %>
-    </div>
+<% else %>
+  <div class="shopping_cart">
+    <% @order_items.each do |order_item| %>
+    <%= render 'carts/cart_row', meal: order_item.meal, order_item: order_item, show_total: true %>
+    <% end %>
+  </div>
   <%end%>
 </div>
 
 <%if current_order.subtotal > 0%>
-   <div id="checkout_aside">
-       <%=render 'carts/checkout_aside'%>
-   </div>
- <%end%>
+<div id="checkout_aside">
+  <%=render 'carts/checkout_aside'%>
+</div>
+<%end%>

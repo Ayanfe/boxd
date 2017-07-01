@@ -1,7 +1,7 @@
-
-  <div id="order_subtotal">
-    <h4>Sub-total <%= number_to_currency(current_order.subtotal, unit: "N") %></h4>
-  </div>
+<div id="order_subtotal">
+  <h4>Sub-total
+    <%= number_to_currency(current_order.subtotal, unit: "N") %></h4>
+</div>
 
 <div id="checkout_button">
   <%= link_to "Checkout", payment_path%>
