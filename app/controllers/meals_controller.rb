@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-  before_filter :authenticate_admin!, only: [:create, :new, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:create, :new, :edit, :update, :destroy]
   def create
     @meal = Meal.new(meal_params)
     if @meal.save
@@ -20,9 +20,8 @@ class MealsController < ApplicationController
 
   def show
     @meal = Meal.find(params[:id])
-    @meal.order_items.each do |oi|
-      @order_item = oi
-    end
+    @order_item = OrderItem.new
+    @order_item.save
   end
 
 
