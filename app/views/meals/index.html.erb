@@ -19,7 +19,7 @@
     <% @meals.each do |meal| %>
       <%= render "meal_row", meal: meal, order_item: @order_item %>
     <% end %>
-    <%= will_paginate @products %>
+    <%= will_paginate @meals %>
     <%end%>
   </div>
 
