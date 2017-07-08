@@ -7,11 +7,14 @@ body {
   border: 0;
   padding: 0;
   font-size: 100%;
-  font-family: 'Product Sans';
+  background-color: rgba(191, 192, 192, 1);
+  font-family: 'Maven Pro';
+  color: rgba(45, 49, 66, 1);
 }
 
 #header {
   position: fixed;
+  z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
@@ -108,15 +111,6 @@ body {
     color: white;
 
     #nav {
-      p a.button {
-        border-color: white;
-
-        &:hover {
-          background: white;
-          color: black;
-        }
-      }
-
       ul.dropdown {
         li {
           &#content {

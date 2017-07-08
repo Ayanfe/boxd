@@ -14,28 +14,46 @@ a {
   font-weight: 100;
 
   &:hover {
-    color: #932230;
+    color: rgba(79, 93, 117, 1);
   }
 
   &.button {
     text-transform: uppercase;
-    border: 1px solid black;
-    padding: 0.8em 1em;
+    border: 2px solid white;
+    background-color: white;
+    color: rgba(45, 49, 66, 1);
+    border-radius: .3em;
+    padding: 0.8em 1.2em;
     display: inline-block;
     line-height: normal;
+    box-shadow: 0px 0px 20px -5px rgba(45, 49, 66, 1);
 
     &:hover {
-      background-color: #932230;
+      background-color: rgba(79, 93, 117, 1);
       color: white;
-      border-color: #932230;
+      border-color: rgba(79, 93, 117, 1);
     }
 
-    &.white {
-      border-color: white;
+    &.inverse {
+      background-color: rgba(79, 93, 117, 1);
+      color: white;
+      border-color: rgba(79, 93, 117, 1);
 
       &:hover {
-        color: black;
+        border: 2px solid white;
         background-color: white;
+        color: rgba(45, 49, 66, 1);
+      }
+    }
+
+    &.highlight {
+      background-color: rgba(242, 98, 38, 1);
+      color: white;
+      border-color: rgba(242, 98, 38, 1);
+
+      &:hover {
+        background-color: white;
+        color: rgba(242, 98, 38, 1);
         border-color: white;
       }
     }

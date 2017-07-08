@@ -1,4 +1,4 @@
-<div id="header" class="transparent">
+<div id="header" class="">
   <%=link_to image_tag('logo', alt: 'Logo', class: 'logo'), root_path, :id => "logo"%>
 
   <div id="nav">
@@ -40,7 +40,7 @@
     </ul>
   <% else %>
     <p>
-      <%=link_to 'log in', new_user_session_path, class: "button"%>
+      <%=link_to 'log in', new_user_session_path, class: "button inverse"%>
     </p>
     <% end %>
   </div>
