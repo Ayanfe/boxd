@@ -1,4 +1,4 @@
-<div class='banner center tall' style="background-image: url(<%= image_path('food1') %>)">
+<div class='banner' style="background-image: url(<%= image_path('food1') %>)">
   <div id="content">
     <h2 id="main">Don't want to go to the market?<br>Let's do it for you.</h2>
     <p class="sub">Leave the hassle of grocery shopping behing and let us tend to your needs.</p>
@@ -10,21 +10,27 @@
   <h2 id="title">How it Works</h2>
   <div class="cards cf">
     <div class="card">
-      <%= image_tag 'vvv', alt:'You crave'%>
+      <div class="img">
+        <%= image_tag 'vvv', alt:'You crave'%>
+      </div>
       <div id="text">
         <h2 id="title">You crave</h2>
         <p id="details">Craving is what you do all day long. We don't care, we don't give a s***. Shut up and give us all your money.</p>
       </div>
     </div>
     <div class="card">
-      <%= image_tag 'vvv', alt:'You crave'%>
+      <div class="img">
+        <%= image_tag 'vvv', alt:'You crave'%>
+      </div>
       <div id="text">
         <h2 id="title">We box</h2>
         <p id="details">A whole bunch of nonsense about boxing. I mean what's the point of this even. What's so special about boxes.</p>
       </div>
     </div>
     <div class="card">
-      <%= image_tag 'vvv', alt:'You crave'%>
+      <div class="img">
+        <%= image_tag 'vvv', alt:'You crave'%>
+      </div>
       <div id="text">
         <h2 id="title">We deliver</h2>
         <p id="details">Yeah right. Deliver for s***. We don't even care enough to wipe our asses for you. Why would we come to your house?</p>
@@ -34,10 +40,53 @@
   <%= link_to "more", how_it_works_path, class:"button"%>
 </div>
 
-<div class='banner center' style="background-image: url(<%= image_path('food2') %>)">
+<div class='banner' style="background-image: url(<%= image_path('food2') %>)">
   <div id="content">
     <h2 id="main">Looking for the perfect meal?<br>We've got it.</h2>
     <p class="sub">From traditional to foreign, we've got everything you crave, and more.</p>
-    <%= link_to 'our meals', meals_path, class:'button white'%>
+    <%= link_to 'our meals', meals_path, class:'button'%>
+  </div>
+</div>
+
+<div class="faqs">
+  <h2 id="title">FAQs</h2>
+  <div class="question">
+    <h2 class="question">How does it work?</h2>
+    <p class="answer">
+      Cloud bread try-hard VHS vice waistcoat next level. Celiac selvage taiyaki PBR&B sriracha +1 shoreditch la croix franzen stumptown flannel. Thundercats affogato offal pug cloud bread. Irony aesthetic raw denim, kickstarter polaroid kombucha trust fund art party PBR&B green juice iPhone crucifix +1 affogato.
+    </p>
+  </div>
+  <div class="question">
+    <h2 class="question">What's in the box?</h2>
+    <p class="answer">
+      Cloud bread try-hard VHS vice waistcoat next level. Celiac selvage taiyaki PBR&B sriracha +1 shoreditch la croix franzen stumptown flannel. Thundercats affogato offal pug cloud bread. Irony aesthetic raw denim, kickstarter polaroid kombucha trust fund art party PBR&B green juice iPhone crucifix +1 affogato. Echo park try-hard health goth chambray, kogi meh helvetica portland vegan skateboard gluten-free.
+    </p>
+  </div>
+  <div class="question">
+    <h2 class="question">How do I place an order?</h2>
+    <p class="answer">
+      Cloud bread try-hard VHS vice waistcoat next level. Celiac selvage taiyaki PBR&B sriracha +1 shoreditch la croix franzen stumptown flannel. Thundercats affogato offal pug cloud bread. Irony aesthetic raw denim, kickstarter polaroid kombucha trust fund art party PBR&B green juice iPhone crucifix +1 affogato. Echo park try-hard health goth chambray, kogi meh helvetica portland vegan skateboard gluten-free.
+    </p>
+  </div>
+  <div class="question">
+    <h2 class="question">How long does it take to deliver?</h2>
+    <p class="answer">
+      Cloud bread try-hard VHS vice waistcoat next level. Celiac selvage taiyaki PBR&B sriracha +1 shoreditch la croix franzen stumptown flannel meh.
+    </p>
+  </div>
+  <div class="question">
+    <h2 class="question">How can I pay?</h2>
+    <p class="answer">
+      Cloud bread try-hard VHS vice waistcoat next level. Celiac selvage taiyaki PBR&B sriracha +1 shoreditch la croix franzen stumptown flannel. Thundercats affogato offal pug cloud bread. Irony aesthetic raw denim, kickstarter polaroid kombucha trust fund art party PBR&B green juice iPhone crucifix +1 affogato. Echo park try-hard health goth chambray, kogi meh helvetica portland vegan skateboard gluten-free. Direct trade readymade blue bottle meditation banjo bushwick cronut. Locavore kinfolk live-edge 90's man braid slow-carb bushwick.
+    </p>
+  </div>
+  <%= link_to 'FAQs', '#', class:'button'%>
+</div>
+
+<div class='banner' style="background-image: url(<%= image_path('food4') %>)">
+  <div id="content">
+    <h2 id="main">Want to ask a question?<br>We'd love to help.</h2>
+    <p class="sub">Wether you don't understand something, think somethings not working, or just want to say hi, you can chat us up anytime.</p>
+    <%= link_to 'Contact Us', '#', class:'button'%>
   </div>
 </div>
