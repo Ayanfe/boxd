@@ -15,7 +15,7 @@
       <%=link_to("our meals", meals_path)%></h1>
   </div>
   <%else%>
-  <div class="meal_holder">
+  <div class="meal_holder cf">
     <% @meals.each do |meal| %>
     <%= render "meal_row", meal: meal, order_item: @order_item %>
     <% end %>
