@@ -9,31 +9,46 @@
 <div id="index_how">
   <h2 id="title">How it Works</h2>
   <div class="cards cf">
-    <div class="card">
-      <div class="img">
-        <%= image_tag 'vvv', alt:'You crave'%>
+    <div class="row">
+      <div class="card">
+        <div class="img">
+          <%= image_tag 'placeholder', alt:'You crave'%>
+        </div>
+        <hr>
+        <div id="text">
+          <h2 id="title">You crave</h2>
+        </div>
       </div>
-      <div id="text">
-        <h2 id="title">You crave</h2>
-        <p id="details">Craving is what you do all day long. We don't care, we don't give a s***. Shut up and give us all your money.</p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="img">
-        <%= image_tag 'vvv', alt:'You crave'%>
-      </div>
-      <div id="text">
-        <h2 id="title">We box</h2>
-        <p id="details">A whole bunch of nonsense about boxing. I mean what's the point of this even. What's so special about boxes.</p>
+      <div class="details">
+        <p>Cloud bread try-hard VHS vice waistcoat next level.</p>
       </div>
     </div>
-    <div class="card">
-      <div class="img">
-        <%= image_tag 'vvv', alt:'You crave'%>
+    <div class="row">
+      <div class="card">
+        <div class="img">
+          <%= image_tag 'placeholder', alt:'You crave'%>
+        </div>
+        <hr>
+        <div id="text">
+          <h2 id="title">We box</h2>
+        </div>
       </div>
-      <div id="text">
-        <h2 id="title">We deliver</h2>
-        <p id="details">Yeah right. Deliver for s***. We don't even care enough to wipe our asses for you. Why would we come to your house?</p>
+      <div class="details">
+        <p>Thundercats affogato offal pug cloud bread. Irony aesthetic raw denim.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card">
+        <div class="img">
+          <%= image_tag 'placeholder', alt:'You crave'%>
+        </div>
+        <hr>
+        <div id="text">
+          <h2 id="title">We deliver</h2>
+        </div>
+      </div>
+      <div class="details">
+        <p>Kogi meh helvetica portland vegan skateboard gluten-free.</p>
       </div>
     </div>
   </div>
@@ -44,7 +59,7 @@
   <div id="content">
     <h2 id="main">Looking for the perfect meal?<br>We've got it.</h2>
     <p class="sub">From traditional to foreign, we've got everything you crave, and more.</p>
-    <%= link_to 'our meals', meals_path, class:'button'%>
+    <%= link_to 'our meals', meals_path, class:'button inverse'%>
   </div>
 </div>
 
@@ -87,6 +102,6 @@
   <div id="content">
     <h2 id="main">Want to ask a question?<br>We'd love to help.</h2>
     <p class="sub">Wether you don't understand something, think somethings not working, or just want to say hi, you can chat us up anytime.</p>
-    <%= link_to 'Contact Us', '#', class:'button'%>
+    <%= link_to 'Contact Us', '#', class:'button inverse'%>
   </div>
 </div>
