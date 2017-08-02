@@ -14,13 +14,13 @@
         <div class="img">
           <%= image_tag 'placeholder', alt:'You crave'%>
         </div>
-        <hr>
-        <div id="text">
-          <h2 id="title">You crave</h2>
-        </div>
+
       </div>
       <div class="details">
-        <p>Cloud bread try-hard VHS vice waistcoat next level.</p>
+        <div id="cont">
+          <h3>Step 1: You Crave</h3>
+          <p>Go through our extensive list of meals and find the one perfect for you.</p>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -28,13 +28,12 @@
         <div class="img">
           <%= image_tag 'placeholder', alt:'You crave'%>
         </div>
-        <hr>
-        <div id="text">
-          <h2 id="title">We box</h2>
-        </div>
       </div>
       <div class="details">
-        <p>Thundercats affogato offal pug cloud bread. Irony aesthetic raw denim.</p>
+        <div id="cont">
+          <h3>Step 2: We box</h3>
+          <p>Place an order and we'll get it prepared in no time, wether you're cooking it yourself or not.</p>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -42,22 +41,21 @@
         <div class="img">
           <%= image_tag 'placeholder', alt:'You crave'%>
         </div>
-        <hr>
-        <div id="text">
-          <h2 id="title">We deliver</h2>
-        </div>
       </div>
       <div class="details">
-        <p>Kogi meh helvetica portland vegan skateboard gluten-free.</p>
+        <div id="cont">
+          <h3>Step 3: We deliver</h3>
+          <p>Expect your order at your doorstep or a collection spot near you in at most 24 hours.</p>
+        </div>
       </div>
     </div>
   </div>
-  <%= link_to "more", how_it_works_path, class:"button"%>
+  <%= link_to "Learn More", how_it_works_path, class:"button"%>
 </div>
 
-<div class='banner' style="background-image: url(<%= image_path('food2') %>)">
+<div class='banner' style="background-image: url(<%= image_path('food5') %>)">
   <div id="content">
-    <h2 id="main">Looking for the perfect meal?<br>We've got it.</h2>
+    <h2 id="main">Get yourself something to eat</h2>
     <p class="sub">From traditional to foreign, we've got everything you crave, and more.</p>
     <%= link_to 'our meals', meals_path, class:'button inverse'%>
   </div>

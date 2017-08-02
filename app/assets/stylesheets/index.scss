@@ -6,6 +6,7 @@
     text-transform: uppercase;
     font-size: 2em;
     margin: 0;
+    margin-bottom: 30px;
     padding: 0;
   }
 
@@ -17,11 +18,11 @@
 
   .row {
     width: 750px;
-    height: 300px;
+    height: 250px;
     margin: 10px 0;
 
     .card {
-      height: 300px;
+      height: 250px;
       float: left;
       width: 250px;
       display: inline-block;
@@ -45,18 +46,20 @@
       }
 
       hr {
-        margin: auto;
-        width: 230px;
-        opacity: 0.3;
+        display: none;
       }
 
       #text {
-        height: 50px;
-        padding: 10px;
+        display: none;
+      }
 
-        h2#title {
-          font-size: 1.5em;
-          margin: 0;
+      &:hover {
+        .img {
+          padding: 0;
+
+          img {
+            border-radius: 0;
+          }
         }
       }
     }
@@ -70,14 +73,19 @@
       padding-left: 30px;
       border: 0;
       width: 500px;
-      height: 300px;
+      height: 250px;
 
-      p {
+      #cont {
         text-align: left;
-        font-size: 2.2em;
-        font-weight: 900;
-        color: rgba(79, 93, 117, 1);
+
+        h3 {
+          font-size: 2.2em;
+          font-weight: 900;
+          color: rgba(79, 93, 117, 1);
+          margin: 0;
+        }
       }
+
     }
     &:nth-child(even) {
       .card, .details {
@@ -86,10 +94,6 @@
       .details {
         padding: 0;
         padding-right: 30px;
-
-        p {
-          text-align: right;
-        }
       }
     }
   }

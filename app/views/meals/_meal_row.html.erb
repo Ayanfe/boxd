@@ -1,5 +1,4 @@
-<a href="#">
-  <div class="card">
+<a href="<%= url_for meal %>" class="card">
     <div class="img">
       <%= image_tag meal.image.thumb.url, alt: meal.name%>
     </div>
@@ -7,36 +6,4 @@
     <div id="text">
       <h2 id="title"><%= meal.name %></h2>
     </div>
-  </div>
 </a>
-
-
-
-<!-- <div class="meal_card">
-  <ul>
-    <li>
-      <div id="meal_card_top">
-        <%=# link_to (image_tag meal.image.thumb.url, id: "meal_image"), meal
-        %>
-      </div>
-    </li>
-    <li>
-      <div id="meal_card_bottom">
-            <%if user_signed_in?%>
-              <div >
-                <%=# form_for order_item, remote: true do |f|
-                %>
-                  <h4><%= meal.name %></h4>
-                  <h4 class="text-right">Price:<%= number_to_currency( meal.price, unit: "N") %></h4>
-                <%#end
-                %>
-              </div>
-
-              <%else%>
-              <%= link_to "Sign in to purchase", new_user_session_path, id: "sign_in_store"%>
-            <% end %>
-      </div>
-    </li>
-  </ul>
-
-</div> -->

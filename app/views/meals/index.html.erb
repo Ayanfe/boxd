@@ -1,26 +1,27 @@
 <% provide(:title, "Our Meals")%>
+
 <div id="search_bar">
-  <%=form_tag meals_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search],placeholder: "Search" %>
+  <% header_data = form_tag meals_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search],placeholder: "Find a Meal" %>
     <%= submit_tag "Go", :name => nil %>
-  </p>
   <% end %>
 </div>
 
+<% provide(:header_data, header_data)%>
+
 <div>
   <% if @meals.blank?%>
-  <div class="empty_page">
-    <h1>Sorry that meal does not exist right now :(, try searching for something else or go to
-      <%=link_to("our meals", meals_path)%></h1>
-  </div>
+    <div class="empty_page">
+      <h1>Sorry that meal does not exist right now :(, try searching for something else or go to
+        <%=link_to("our meals", meals_path)%></h1>
+    </div>
   <%else%>
-  <div class="meal_holder cf">
-    <% @meals.each do |meal| %>
-    <%= render "meal_row", meal: meal, order_item: @order_item %>
-    <% end %>
+    <div class="meal_holder cf">
+      <% @meals.each do |meal| %>
+      <%= render "meal_row", meal: meal, order_item: @order_item %>
+      <% end %>
+    </div>
     <%= will_paginate @meals %>
-    <%end%>
-  </div>
+  <%end%>
 
 </div>

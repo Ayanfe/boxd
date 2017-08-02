@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <%= render 'layouts/header'%>
+    <%= render 'layouts/header', header_data: yield(:header_data)%>
 
     <div id="notice">
       <% if notice %>
