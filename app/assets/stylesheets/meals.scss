@@ -33,13 +33,6 @@
         display: block;
       }
     }
-
-    hr {
-      margin: auto;
-      width: 230px;
-      opacity: 0.3;
-    }
-
     #text {
       height: 50px;
       padding: 10px;
@@ -61,8 +54,12 @@
         }
       }
 
-      hr {
-        width: 100%;
+      #text {
+        background-color: rgba(45, 49, 66, 1);
+
+        h2#title {
+          color: white;
+        }
       }
     }
   }

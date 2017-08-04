@@ -81,6 +81,11 @@ a {
     padding: 0 1em;
     text-decoration: none;
     font-style: normal;
+
+    &:not(.disabled):hover {
+      background-color: white;
+      color: rgba(79, 93, 117, 1);
+    }
   }
 
   .current {
